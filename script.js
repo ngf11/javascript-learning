@@ -36,5 +36,36 @@ const timeSinceTheSenventies = time.getTime();
 //   `The area of the circle is ${pi * parseFloat(radius) * parseFloat(radius)}`
 // );
 // Slope is m = (y2-y1) / (x2-x1). Find the slope between point (2, 2) and point(6,10)
-const sideX = prompt("Enter Side X");
-const sideY = prompt("Enter side Y");
+// const hours = prompt("How many hour have you worked this week?");
+// const rate = prompt("What is your hourly rate?");
+// const reponse = alert(
+//   `Enter hours:${hours}\n Enter rate per hour:${rate}\n Your weekly earnings:${
+//     hours * rate
+//   }`
+// );
+// function nameLegnthgreet() {
+//   const enterName = prompt("What is your name?");
+//   if (enterName.length >= 7) {
+//     return alert("Thats a long funcking name");
+//   } else {
+//     return alert("Thats a short fucnking name");
+//   }
+// }
+// nameLegnthgreet();
+// function enterName() {
+//   const firstname = prompt("enter your first name?");
+//   const lastname = prompt("enter your last name");
+//   if (firstname.length > lastname.length) {
+//     return alert(
+//       `Your first name, ${firstname} is longer than your family name, ${lastname}`
+//     );
+//   } else {
+//     return alert(
+//       `Your last name, ${lastname} is longer that your first name,${firstname}`
+//     );
+//   }
+// }
+// enterName();
+const myage = 333;
+const enterAge = prompt("enter your age?");
+const messege = alert(`I am ${myage - enterAge} years older the you`);
