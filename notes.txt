@@ -410,5 +410,43 @@ hh = hh < 10 ? "0" + hh : hh;
 mm = mm < 10 ? "0" + mm : mm;
 day = day < 10 ? "0" + day : day;
 month = month < 10 ? "0" + month : month;
-
 console.log(`${day}-${month}-${year} ${hh}:${mm}${session}`);
+let firstName = "Nicolas";
+let lastName = "Fuentes";
+let country = " United States";
+let city = "Kearny";
+let age = 34;
+let isMarry = false;
+let year = 1989;
+console.log(
+  typeof firstName,
+  typeof lastName,
+  typeof country,
+  typeof city,
+  typeof age,
+  typeof isMarry,
+  typeof year
+);
+console.log("10" == 10);
+console.log(parseFloat("9.8") === 10);
+console.log(parseFloat("10") == 10);
+let poop = "hello";
+let you = true;
+let num = 369;
+let str = "";
+let me = false;
+let chichi = 0;
+let bobo = false;
+let riri = null;
+let roro = undefined;
+console.log(4 > 3, "ture");
+console.log(4 >= 3, "true");
+console.log(4 < 3, "false");
+console.log(4 <= 3, "false");
+console.log(4 == 4, "ture");
+console.log(4 === 4, "ture");
+console.log(4 != 4, "false");
+console.log(4 !== 4);
+console.log(4 != "4", "ture");
+console.log(4 == "4", "ture");
+console.log(4 === "4", "false");
