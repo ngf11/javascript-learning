@@ -701,3 +701,59 @@ console.log(4 !== 4, "false");
 console.log(4 != "4", "true");
 console.log(4 == "4", "false");
 console.log(4 === "4", "false");
+console.log(date);
+console.log(year);
+console.log(month);
+console.log(day);
+console.log(hh);
+console.log(mm);
+console.log(secondsSice);
+let base = prompt("enter the base of the triangle");
+let hight = prompt("enter the hight of the triangle");
+let area = alert(
+  `Enter base: ${base}\nEnter height: ${hight}\nThe area of the triangle is ${
+    0.5 * base * hight
+  }`
+);
+// let secondsSice = date.getTime();
+// let sideA = prompt("Enter side A");
+// let sideB = prompt("Enter side B");
+// let sideC = prompt("Enter side C");
+// let perm = alert(
+//   `Enter side a: ${sideA}\nEnter side b: ${sideB}\nEnter side c: ${sideC}\nThe perimeter of the triangle is ${
+//     parseFloat(sideA) + parseFloat(sideB) + parseFloat(sideC)
+//   }`
+// );
+// let length = prompt("Enter the length");
+// let width = prompt("Enter width");
+// let rec = alert(
+//   `Enter length: ${length}\nEnter wide: ${width}\nThe area of the rectangle:${
+//     length * width
+//   }\nThe perimeter pf the rectangle: ${
+//     2 * (parseFloat(length) + parseFloat(width))
+//   }`
+// );
+// let hours = prompt("Enter hours worked");
+// let rate = prompt("Enter hours work");
+// let earning = prompt(
+//   `Enter hours: ${hours}\nEnter rate: ${rate}\nYour total earnings: ${
+//     hours * rate
+//   }`
+// );
+// let yourName = prompt("enter your name");
+
+// let responce =
+//   yourName.length >= 7
+//     ? alert("Your name is seven character long")
+//     (yourName.length < 7)
+//     : alert("your name is too short");
+// let firstName = prompt("Enter your first name");
+// let lastName = prompt("Enter your last name ");
+// let responce =
+//   firstName.length > lastName.length
+//     ? alert(
+//         `Your first name ${firstName}, is longer the your last name, ${lastName}`
+//       )
+//     : alert(
+//         `Your last name ${lastName} is longer then your first name ${firstName}`
+//       );
