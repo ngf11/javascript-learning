@@ -870,3 +870,72 @@ console.log(`${day}.${month}.${year} ${hh}:${mm}`);
 //   default:
 //     alert(`Your grade is ${enterGrade} an F `);
 // }
+if (season == 1 || season == 2 || season == 3) {
+  console.log("Winter");
+} else if (season == 4 || season == 4 || season == 6) {
+  console.log("Spring");
+} else if (season == 7 || season == 8 || season == 9) {
+  console.log("Summer");
+} else {
+  console.log("fall");
+}
+switch (season) {
+  case 1:
+  case 2:
+  case 3:
+    console.log("Winter");
+    break;
+  case 4:
+  case 5:
+  case 6:
+    console.log("Spring");
+    break;
+  case 7:
+  case 8:
+  case 9:
+    console.log("Summer");
+    break;
+  default:
+    console.log("Fall");
+}
+const weekDay = new Date().getDay();
+console.log(weekDay);
+let whatDayIsIt = prompt("What day is today", "Ex. Monday");
+let day = whatDayIsIt.toLocaleLowerCase();
+switch (day) {
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+    alert(`What is the day today? ${whatDayIsIt}\n${day} is a working day.`);
+    break;
+  default:
+    alert(`What is the day today? ${whatDayIsIt}\n${day} is a weeked day.`);
+}
+const season = new Date().getMonth() + 1;
+console.log(season);
+const WhatMOnth = prompt("Whta is it?");
+let month = WhatMOnth.toLocaleLowerCase();
+if (month == "february") {
+  alert(` Enter a month: ${WhatMOnth}\nFebruary has 28 days.`);
+} else if (
+  month == "january" ||
+  month == "march" ||
+  month == "may" ||
+  month == "july" ||
+  month == "august" ||
+  month == "october" ||
+  month == "december"
+) {
+  alert(`Enter a month: ${WhatMOnth}\n${month} has 31 days.`);
+} else if (
+  month == "april" ||
+  month == "june" ||
+  month == "september" ||
+  month == "november"
+) {
+  alert(`Enter a month: ${WhatMOnth}\n${month} has 30 days.`);
+} else {
+  alert(`${WhatMOnth} not a valid month`);
+}
