@@ -939,3 +939,105 @@ if (month == "february") {
 } else {
   alert(`${WhatMOnth} not a valid month`);
 }
+// //he year must be evenly divisible by 4;
+// If the year can also be evenly divided by 100, it is not a leap year;
+// unless...
+// The year is also evenly divisible by 400. Then it is a leap year.
+// const today = new Date();
+// console.log(today);
+// const year = prompt("enter year");
+// const months = today.getMonth() + 1;
+// // const WhatMOnth = prompt("Whta is it?");
+// // let month = WhatMOnth.toLocaleLowerCase();
+// // console.log(year);
+// // console.log(month);
+// function leapYear(year) {
+//   if (year % 4 == 0 || year % 400 == 0) {
+//     return alert("leap");
+//   } else if (year % 100 !== 0) {
+//     return alert("no leap");
+//   } else {
+//     return alert("no leap");
+//   }
+// }
+
+// function leap(month) {
+//   if (month == "february") {
+//     alert(` Enter a month: ${WhatMOnth}\nFebruary has 29 days.`);
+//   } else if (
+//     month == "january" ||
+//     month == "march" ||
+//     month == "may" ||
+//     month == "july" ||
+//     month == "august" ||
+//     month == "october" ||
+//     month == "december"
+//   ) {
+//     alert(`Enter a month: ${WhatMOnth}\n${month} has 31 days.`);
+//   } else if (
+//     month == "april" ||
+//     month == "june" ||
+//     month == "september" ||
+//     month == "november"
+//   ) {
+//     alert(`Enter a month: ${WhatMOnth}\n${month} has 30 days.`);
+//   } else {
+//     alert(`${WhatMOnth} not a valid month`);
+//   }
+// }
+
+// function notLeap(month) {
+//   if (month == "february") {
+//     alert(` Enter a month: ${WhatMOnth}\nFebruary has 28 days.`);
+//   } else if (
+//     month == "january" ||
+//     month == "march" ||
+//     month == "may" ||
+//     month == "july" ||
+//     month == "august" ||
+//     month == "october" ||
+//     month == "december"
+//   ) {
+//     alert(`Enter a month: ${WhatMOnth}\n${month} has 31 days.`);
+//   } else if (
+//     month == "april" ||
+//     month == "june" ||
+//     month == "september" ||
+//     month == "november"
+//   ) {
+//     alert(`Enter a month: ${WhatMOnth}\n${month} has 30 days.`);
+//   } else {
+//     alert(`${WhatMOnth} not a valid month`);
+//   }
+// }
+// leapYear();
+function isLeapYear(year) {
+    // Leap years are divisible by 4, but not by 100, unless they are divisible by 400
+    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  }
+  
+  function getNumberOfDays(month, year) {
+    const daysInMonth = {
+      1: 31, // January
+      2: isLeapYear(year) ? 29 : 28, // February (depends on leap year)
+      3: 31, // March
+      4: 30, // April
+      5: 31, // May
+      6: 30, // June
+      7: 31, // July
+      8: 31, // August
+      9: 30, // September
+      10: 31, // October
+      11: 30, // November
+      12: 31 // December
+    };
+  
+    return daysInMonth[month];
+  }
+  
+  // Example usage:
+  const month = 2; // February
+  const year = 2024; // Leap year
+  const numberOfDays = getNumberOfDays(month, year);
+  console.log(`Number of days in month ${month} of year ${year}: ${numberOfDays}`);
+  
