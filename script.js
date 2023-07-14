@@ -1,5 +1,5 @@
-const month = 2; // February
-const year = 2024; // Leap year
+const month = prompt("Enter the number of the month");
+const year = prompt("Enter the year");
 const numberOfDays = getNumberOfDays(month, year);
 function getNumberOfDays(month, year) {
   const daysInMonth = {
@@ -23,7 +23,5 @@ function isLeapYear(year) {
   // Leap years are divisible by 4, but not by 100, unless they are divisible by 400
   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 }
-
-console.log(
-  `Number of days in month ${month} of year ${year}: ${numberOfDays}`
-);
+getNumberOfDays();
+alert(`Number of days in month ${month} of year ${year}: ${numberOfDays}`);
