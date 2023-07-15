@@ -1,44 +1,56 @@
-//day 2
-let challenge = "30 Days Of JavaScript";
-console.log(challenge);
-console.log(challenge.length);
-console.log(challenge.toLocaleUpperCase());
-console.log(challenge.toLocaleLowerCase());
-console.log(challenge.substr(0, 2));
-console.log(challenge.substring(3, 6));
-console.log(challenge.includes("Script"));
-console.log(challenge.split(""));
-console.log(challenge.split(" "));
-console.log(challenge.split(","));
-console.log(challenge.split(" , "));
-console.log(challenge.split(" ,"));
-console.log(
-  "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon".split(", ")
-);
-console.log(
-  "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon".split(" ,")
-);
-// console.log(challenge.replace("JavaScript", "Python"));
-console.log(challenge.charAt(15));
-console.log(challenge.charCodeAt("J"));
+// console.log(
+//   "The quote\n'There is no exercise better for the heart than reaching down and lifting people up.'\nby John Holmes teaches us to help one another."
+// );
+// console.log(typeof "10" == typeof 10);
+// console.log(typeof "10" == 10);
+// console.log(typeof "10" === typeof 10);
+// console.log(typeof "10" === 10);
+// console.log(parseFloat("9.8") == 10);
+// console.log(parseInt("9.8") == 10);
+// console.log(Math.ceil(parseFloat(9.8)) == 10);
+// // console.log("python".includes("on"), "dragon".includes("on"));
+// console.log("I hope this course is not full of jargon".includes("jargon"));
+// console.log("I hope this course is not full of jargon".match(/jargon/gi));
+console.log(Math.floor(Math.random() * 101));
+console.log(Math.floor(Math.random() * 256));
+console.log(Math.floor(Math.random() * 51) + 50);
+let str = "JavaScript";
+let split = str.split("");
+let random = Math.floor(Math.random() * split.length);
+console.log(split[random]);
+console.log("1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125");
 console.log(
   "You cannot end a sentence with because because because is a conjunction".indexOf(
     "because"
   )
 );
 console.log(
-  "You cannot end a sentence with because because because is a conjunction".lastIndexOf(
-    "because"
+  "You cannot end a sentence with because because because is a conjunction".substr(
+    31,
+    24
   )
 );
 console.log(
-  "You cannot end a sentence with because because because is a conjunction".search(
+  "Love is the best thing in this world. Some found their love and some are still looking for their love.".match(
+    /love/gi
+  )
+);
+console.log(
+  "Love is the best thing in this world. Some found their love and some are still looking for their love."
+);
+console.log(
+  "You cannot end a sentence with because because because is a conjunction".match(
     "because"
   )
 );
-console.log(" 30 Days Of JavaScript ".trim());
-console.log(challenge.startsWith("30"));
-console.log(challenge.endsWith("Script"));
-console.log(challenge.match(/a/gi));
-console.log("30 Days of".concat("JavaScript"));
-console.log(challenge.repeat(10));
+const sentence =
+  "%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching";
+console.log(sentence.replace(/[^\w\s]/gi, ""));
+console.log(
+  "He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month."
+    .match(/\d+/gi)
+    .map(Number)
+    .reduce(function (a, b) {
+      return a + b;
+    })
+);
