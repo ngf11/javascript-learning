@@ -1398,3 +1398,41 @@ console.log(date);
 // let myAge = 250;
 // let yourAge = 34;
 // console.log(`I am ${myAge - yourAge} years older then you`);
+let birth = prompt("Enter the year you were born");
+let canYouDrive =
+  year - birth > 18
+    ? alert(
+        `Enter birth year: ${birth}\nYou are ${
+          year - birth
+        }. You are old enough to drive`
+      )
+    : alert(
+        `Enter birth year: ${birth}\nYou are ${
+          year - birth
+        }. You will be allowed to drive after ${18 - (year - birth)} years.`
+      );
+      const date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth() + 1;
+let day = date.getDate();
+let hh = date.getHours();
+let mm = date.getMinutes();
+let secondsSince = date.getTime();
+console.log(`${year}.${month}.${day} ${hh}:${mm}`);
+// console.log(`${month}.${day}.${year} ${hh}:${mm}`);
+if (month < 10) {
+  month = "0" + month;
+}
+if (day < 10) {
+  day = "0" + day;
+}
+if (hh > 12) {
+  hh = hh - 12;
+}
+if (hh < 10) {
+  hh = "0" + hh;
+}
+if (mm < 10) {
+  mm = "0" + mm;
+}
+console.log(`${month}.${day}.${year} ${hh}:${mm}`);
