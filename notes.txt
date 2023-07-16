@@ -1342,3 +1342,59 @@ console.log(!(4 > 3 && 10 < 12), false);
 console.log(!(4 > 3 && 10 > 12), true);
 console.log(!(4 === "4"), true);
 console.log("dragon".includes() !== "python".includes());
+console.log(secondsSince);
+console.log(month);
+console.log(day);
+console.log(year);
+console.log(date);
+// let height = prompt("enter the height of the triangel");
+// let base = prompt("Enter the base of the triangel");
+// let area = alert(
+//   `Enter height:${height}\nEnter base:${base}\nThe area of the triangle:${
+//     0.5 * base * height
+//   }`
+// );
+// let sideA = prompt("Enter side A");
+// let sideB = prompt("Enter side B");
+// let sideC = prompt("Enter side C");
+// let perimeter = alert(
+//   `Enter side A:${sideA}\nEnter side B:${sideB}\nEnter Side C:${sideC}\nThe triangles perimeter:${
+//     parseFloat(sideA) + parseFloat(sideB) + parseFloat(sideC)
+//   }`
+// );
+// let length = prompt("Enter the length of a rectangle");
+// let width = prompt("Enter the width of a trinagle");
+// let areaP = alert(
+//   `Enter length:${length}\nEnter width:${width}\nThe area of the rectagle:${
+//     length * width
+//   }\nThe perimeter of the rectangle:${
+//     2 * (parseFloat(length) + parseFloat(width))
+//   }`
+// );
+// let PI = 3.14;
+// let radius = prompt("enter the radius of the circle");
+// let respo = alert(
+//   `Enter radius:${radius}\nCircunferences${2 * PI * radius}\nThe area:${
+//     PI * radius * radius
+//   }`
+// );
+// let hours = prompt("Enter the hours worked");
+// let rate = prompt("ENter your rate per hour");
+// let ernings = alert(
+//   `Enter hours: ${hours}\nEnter rate per hour: ${rate}\nYour weekly earning is ${
+//     rate * hours
+//   }`
+// );
+// let firstName = prompt("Enter your first name");
+// let lastName = prompt("Enter your last name");
+// let compared =
+//   firstName.length > lastName.length
+//     ? alert(
+//         `Your first name ${firstName} is longer the your last name, ${lastName}`
+//       )
+//     : alert(
+//         `Your last name ${lastName} is longer the your last name , ${firstName}`
+//       );
+// let myAge = 250;
+// let yourAge = 34;
+// console.log(`I am ${myAge - yourAge} years older then you`);
