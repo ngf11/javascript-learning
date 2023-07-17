@@ -1436,3 +1436,85 @@ if (mm < 10) {
   mm = "0" + mm;
 }
 console.log(`${month}.${day}.${year} ${hh}:${mm}`);
+// Day 4
+// let age = prompt("What is your age?");
+// let responce =
+//   age >= 18
+//     ? alert(`Enter your age: ${age}\nYou are old enough to drive.`)
+//     : alert(`Enter your age: ${age}
+// You are left with ${18 - age} years to drive.`);
+// const myAge = 34;
+// const yourAge = prompt("Enter your age");
+// if (yourAge > myAge) {
+//   alert(`Enter your age: ${yourAge}\nYou are ${
+//     yourAge - myAge
+//   } years older than me.
+//         `);
+// } else if (myAge > yourAge) {
+//   alert(
+//     `Enter your age: ${yourAge}\nYou are younger the me by ${myAge - yourAge}`
+//   );
+// } else {
+//   alert(`We are the same age ${yourAge}. Cute`);
+// }
+// const num = prompt("Enter any number");
+// let even =
+//   num % 2 === 0
+//     ? alert(`Enter num:${num}\n is an Even number`)
+//     : alert(`Enter number:${num}\nIs an odd number.`);
+// const grade = prompt("Enter your grade");
+// switch (true) {
+//   case grade > 90:
+//     alert("A");
+//     break;
+//   case grade > 70:
+//     alert("B");
+//     break;
+//   case grade > 60:
+//     alert("C");
+//     break;
+//   case grade > 50:
+//     alert("D");
+//     break;
+//   default:
+//     alert("F");
+// }
+// Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
+// const season = prompt("What month is it?");
+// let lowerd = season.toLocaleLowerCase();
+// switch (lowerd) {
+//   case "december":
+//   case "january":
+//   case "february":
+//     alert("Winter");
+//     break;
+//   case "march":
+//   case "april":
+//   case "may":
+//     alert("Spring");
+//     break;
+//   case "june":
+//   case "july":
+//   case "august":
+//     alert("Summer");
+//     break;
+//   case "september":
+//   case "october":
+//   case "november":
+//     alert("Autumn");
+//   default:
+//     alert("That is not a months");
+// }
+const day = new Date().getDay();
+console.log(day);
+switch (day) {
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+    console.log("It is a work day");
+    break;
+  default:
+    console.log("Its the weekend");
+}
