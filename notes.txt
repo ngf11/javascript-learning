@@ -1518,3 +1518,45 @@ switch (day) {
   default:
     console.log("Its the weekend");
 }
+// const month = prompt("Enter the month");
+// let lower = month.toLocaleLowerCase();
+// if (lower == "february") {
+//   alert("29 days");
+// } else if (
+//   lower == "january" ||
+//   lower == "march" ||
+//   lower == "may" ||
+//   lower == "july" ||
+//   lower == "august" ||
+//   lower == "october" ||
+//   lower == "december"
+// ) {
+//   alert("31 days");
+// } else {
+//   alert("30 DAYS");
+// }
+const month = prompt("Enter the number of the month");
+const year = prompt("Enter the year");
+let daysIn = numOfDays(month, year);
+function leap(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+}
+function numOfDays(month, year) {
+  const days = {
+    1: 31,
+    2: leap(year) ? 29 : 28,
+    3: 31, // March
+    4: 30, // April
+    5: 31, // May
+    6: 30, // June
+    7: 31, // July
+    8: 31, // August
+    9: 30, // September
+    10: 31, // October
+    11: 30, // November
+    12: 31, // December
+  };
+  return days[month];
+}
+numOfDays();
+alert(`${month} in ${year} was ${daysIn}`);
