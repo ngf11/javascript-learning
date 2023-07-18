@@ -1,16 +1,24 @@
-const nico = ["Hola", "chau", "hello", "bye bye"];
-console.log(nico.indexOf("chau"));
-const me = ["nico", "fuentes", "uruguay"];
-console.log(me.join());
-console.log(me.join(""));
-console.log(me.join(","));
-console.log(me.join(", "));
-console.log(me.join("##"));
-const numbers = [1, 2, 3, 4, 5];
-numbers.splice(2, 2, 7, 8, 9);
-console.log(numbers.slice(0));
-console.log(numbers.slice(0, 1));
-console.log(numbers.slice(3, 4));
-console.log(numbers.splice(0));
-console.log(numbers.splice(0, 1));
-console.log(numbers.splice(2, 2, 7, 8, 9));
+// const arr = [];
+// const nums = [1, 2, 3, 4, 5];
+// console.log(nums.length);
+// console.log(nums[0]);
+// console.log(nums[2]);
+// console.log(nums[nums.length - 1]);
+const mixedDataTypes = ["nico", "fuentes", 34, 1989, { isMarried: true }];
+console.log(mixedDataTypes);
+console.log(mixedDataTypes.length);
+const itCompanies = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+console.log(itCompanies[0]);
+console.log(itCompanies.slice(3, 4));
+console.log(itCompanies[itCompanies.length - 1]);
+console.log(itCompanies.toString());
+console.log(itCompanies.toString().toUpperCase());
+//EX 1 #12
