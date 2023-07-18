@@ -1,1 +1,16 @@
-
+const nico = ["Hola", "chau", "hello", "bye bye"];
+console.log(nico.indexOf("chau"));
+const me = ["nico", "fuentes", "uruguay"];
+console.log(me.join());
+console.log(me.join(""));
+console.log(me.join(","));
+console.log(me.join(", "));
+console.log(me.join("##"));
+const numbers = [1, 2, 3, 4, 5];
+numbers.splice(2, 2, 7, 8, 9);
+console.log(numbers.slice(0));
+console.log(numbers.slice(0, 1));
+console.log(numbers.slice(3, 4));
+console.log(numbers.splice(0));
+console.log(numbers.splice(0, 1));
+console.log(numbers.splice(2, 2, 7, 8, 9));
