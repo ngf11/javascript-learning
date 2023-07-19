@@ -1612,3 +1612,103 @@ const numbers = [1, 2, 3, 4, 5];
 numbers.splice(2, 3);
 numbers.splice(3, 0, 3, 6, 9);
 console.log(numbers);
+// const arr = [];
+// const nums = [1, 2, 3, 4, 5];
+// console.log(nums.length);
+// console.log(nums[0]);
+// console.log(nums[2]);
+// console.log(nums[nums.length - 1]);
+const mixedDataTypes = ["nico", "fuentes", 34, 1989, { isMarried: true }];
+console.log(mixedDataTypes);
+console.log(mixedDataTypes.length);
+const itCompanies = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+console.log(itCompanies[0]);
+console.log(itCompanies.slice(3, 4));
+console.log(itCompanies[itCompanies.length - 1]);
+console.log(itCompanies.toString());
+console.log(itCompanies.toString().toUpperCase());
+const itCompanies = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+// itCompanies.splice(6, 1, "and Amazon are big IT companies.");
+// console.log(itCompanies.toString());
+// const ask = prompt("Enter a tech company");
+// const index = itCompanies.indexOf(`${ask}`);
+// if (index === -1) {
+//   alert("company is not found");
+// } else {
+//   alert(itCompanies[index]);
+// }
+// console.log(itCompanies.sort());
+// console.log(itCompanies.reverse());
+// console.log(itCompanies.slice(0, 3));
+console.log(itCompanies.slice(3, 7));
+console.log(itCompanies.slice(3, 4));
+itCompanies.shift();
+itCompanies.pop();
+console.log(itCompanies);
+console.log(itCompanies.splice());
+console.log(countries.indexOf("Ethiopia"));
+console.log(countries[4].toLocaleUpperCase());
+console.log(webTechs.indexOf("Sass"));
+webTechs.splice(2, 0, "Sass is a CSS preprocess");
+console.log(webTechs);
+const frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd = ["Node", "Express", "MongoDB"];
+const fullStack = [[frontEnd][backEnd]];
+console.log(fullStack);
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages.sort();
+console.log(Math.min(...ages));
+console.log(Math.max(...ages));
+const numOfstudents = ages.length;
+console.log(numOfstudents);
+const sum = ages.reduce(function add(a, b) {
+  return a + b;
+});
+// console.log(sum);
+const ave = Math.round(sum / numOfstudents);
+console.log(`The average age of the students is ${ave}`);
+const range = Math.max(...ages) - Math.min(...ages);
+// console.log(range);
+const maxAve = Math.max(...ages) - ave;
+const minAve = ave - Math.min(...ages);
+console.log(minAve);
+console.log(maxAve);
+let text =
+  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+let clean = text.replace(/[^\w\s]|_/g, "");
+// text.replace(/[^\w]|_/g, "");
+let arrsom = clean.split(" ");
+console.log(arrsom);
+console.log(arrsom.length);
+const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
+shoppingCart.unshift("Meat");
+shoppingCart.push("Sugar");
+shoppingCart.splice(4, 1);
+shoppingCart.splice(3, 1, "Green Tea");
+console.log(shoppingCart);
+// countries.splice(0, 9);
+// console.log(countries);
+const paises = countries.slice(0, 5);
+const states = countries.slice(5, 11);
+paises.push("Uruguay");
+console.log(paises);
+console.log(states);
+const midArr = (countries.length - 1) / 2;
+console.log(countries[midArr]);
+
