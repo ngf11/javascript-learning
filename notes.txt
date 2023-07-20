@@ -1711,4 +1711,110 @@ console.log(paises);
 console.log(states);
 const midArr = (countries.length - 1) / 2;
 console.log(countries[midArr]);
+const emptyArr = [];
+const numArr = [1, 2, 3, 4, 11, 369];
+console.log(numArr[0]);
+console.log(numArr[Math.round((numArr.length - 1) / 2)]);
+console.log(numArr[numArr.length - 1]);
+// console.log(numArr.length - 1 / 2);
+const mixedDataTypes = [
+  "nico",
+  "fuentes",
+  34,
+  1989,
+  { skills: "programer" },
+  { alias: "El Choad" },
+];
+console.log(mixedDataTypes.length);
+const itCompanies = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+// console.log(itCompanies);
+// console.log(itCompanies.length);
+// console.log(itCompanies[0]);
+// console.log(itCompanies[Math.round((itCompanies.length - 1) / 2)]);
+// console.log(itCompanies[0]);
+// console.log(itCompanies[1]);
+// console.log(itCompanies[2]);
+// console.log(itCompanies[3]);
+// console.log(itCompanies[4]);
+// console.log(itCompanies[5]);
+// console.log(itCompanies[6]);
+// itCompanies.splice(5, 2, "Oracle and Amazon are big IT companies.");
+// console.log(itCompanies.toString());
+// itCompanies.sort();
+// console.log(itCompanies);
+// console.log(itCompanies.slice(0, 3));
+// console.log(itCompanies.slice(4, 7));
+// console.log(itCompanies.slice(3, 4));
+// // console.log(itCompanies.shift());
+// itCompanies.shift();
+// console.log(itCompanies);
+// itCompanies.splice(Math.round(itCompanies.length - 1) / 2, 1);
+// console.log(itCompanies);
+// itCompanies.pop();
+// console.log(itCompanies);
+// itCompanies.splice(itCompanies);
+// console.log(itCompanies);
+let text =
+  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+let textClean = text.replace(/[^\w\s]|_/g, "");
+let textCleanArr = textClean.split(" ");
+console.log(textCleanArr);
+console.log(textCleanArr.length);
+const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
+console.log(shoppingCart);
+shoppingCart.unshift("Meat");
+console.log(shoppingCart);
+shoppingCart.push("Sugar");
+console.log(shoppingCart);
+shoppingCart.splice(4, 1);
+console.log(shoppingCart);
+shoppingCart.splice(3, 1, "Yerba Mate");
+console.log(shoppingCart);
+console.log(countries.indexOf("Ethiopia"));
+console.log(countries[4].toUpperCase());
+countries[4] = countries[4].toUpperCase();
+console.log(countries);
+console.log(webTechs.indexOf("Sass"));
+webTechs.splice(2, 0, "Sass");
+console.log(webTechs);
+const frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd = ["Node", "Express", "MongoDB"];
+const fullStack = frontEnd.concat(backEnd);
+console.log(fullStack);
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages.sort();
+console.log(ages);
+const minAge = Math.min(...ages);
+const maxAges = Math.max(...ages);
+console.log(minAge);
+console.log(maxAges);
+const midPoint = ages[Math.round(ages.length / 2)];
+console.log(midPoint);
+const sum = ages.reduce(function add(a, b) {
+  return a + b;
+});
+console.log(sum);
+const ave = Math.round(sum / ages.length);
+console.log(ave);
+const range = maxAges - minAge;
+console.log(range);
+console.log(countries.length);
+// countries.slice(9, 10);
+// countries.splice(0, 9);
+console.log(countries);
+console.log(countries[Math.floor((countries.length - 1) / 2)]);
+console.log(countries.length);
+const paises = countries.splice(0, 6);
+const states = countries.splice(0, 10);
+states.push("Uruguay");
+console.log(paises);
+console.log(states);
 
