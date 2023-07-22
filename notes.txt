@@ -1961,3 +1961,101 @@ console.log(!(4 > 3 && 10 < 12), false);
 console.log(!(4 > 3 && 10 > 12), true);
 console.log(!(4 === "4"), true);
 console.log(!("python".includes("on") && "dragon".includes("on")));
+// let base = prompt("Enter base of a Triangle");
+// let hieght = prompt("Enter the height of the triangle");
+// let area = alert(
+//   `Enter base: ${base}\nEnter height:${hieght}\nThe area of the triangle:${
+//     0.5 * base * hieght
+//   }`
+// );
+// let sideA = prompt("Enter side A");
+// let sideB = prompt("Enter side B");
+// let sideC = prompt("Enter side C");
+// let perimeter = prompt(
+//   `Enter side A: ${sideA}\nEnter side B: ${sideB}\nEnter side C:${sideC}\nThe Perimiter ot the triangle:${
+//     parseInt(sideA) + parseFloat(sideB) + parseInt(sideC)
+//   }`
+// );
+// let length = prompt("Enter the length of the rectangle");
+// let width = prompt("Enter the width or the triangle");
+// let rectangle = alert(
+//   `Enter length: ${length}\nEnter width:${width}\nThe area of the rectangle:${
+//     length * width
+//   }\nThe perimeter of the rectangle: ${
+//     2 * (parseInt(length) + parseInt(width))
+//   }`
+// );
+// const PI = 3.14;
+// let radius = prompt("Enter the radius of the circle");
+// let circle = alert(
+//   `Enter radius:${radius}\nThe area of the circle:${
+//     PI * radius * radius
+//   }\nThe circumferenceof the circle:${2 * PI * radius}`
+// );
+// let x1 = 2;
+// let x2 = 6;
+// let y1 = 2;
+// let y2 = 10;
+// let slope = (y2 - y1) / (x2 - x1);
+// console.log(slope);
+// let x = prompt("Enter the value of X to find Y");
+// const formula = (x ^ 2) + 6 * x + 9;
+// alert(`The value of of y:${formula}`);
+// let hours = prompt("Enter the hours worked");
+// let rate = prompt("Enter your rate per hour");
+// let ernings = alert(
+//   `Enter hours: ${hours}\nEnter rate: ${rate}\mYour earnings for the week: ${
+//     hours * rate
+//   }`
+// );
+// let enterName = prompt("Enter your name");
+// let enterLastName = prompt("Enter your last name");
+// // if (enterName.length >= 7) {
+// //   alert("That is a long name");
+// // } else {
+// //   alert("That is a short name");
+// // }
+// if (enterLastName.length > enterName.length) {
+//   alert("Your last name is longer then your frist name");
+// } else {
+//   alert("Your first name is longer the your last name");
+// }
+// let myAge = 250;
+// let yourAge = 34;
+// let whoIsOlder = alert(`I am ${myAge - yourAge} older the you.`);
+// const drivingAge = now - 18;
+// let yourYear = prompt("enter the year you were born");
+// if (drivingAge > yourYear) {
+//   alert(
+//     `Enter year: ${yourYear}\nYou are ${now - yourYear} years old you can drive`
+//   );
+// } else {
+//   alert(
+//     `Enter year: ${yourYear}\n You are ${now - yourYear}\nYou have to wait ${
+//       18 - (now - yourYear)
+//     } to drive `
+//   );
+// }
+const now = new Date();
+let day = now.getDate();
+let month = now.getMonth();
+let year = now.getFullYear();
+let hh = now.getHours();
+let mm = now.getMinutes();
+console.log(day);
+if (day < 10) {
+  day = "0" + day;
+}
+if (month < 10) {
+  month = "0" + month;
+}
+if (hh > 12) {
+  hh = hh - 12;
+}
+if (hh < 10) {
+  hh = "0" + hh;
+}
+if (mm < 10) {
+  mm = "0" + mm;
+}
+console.log(`${month}.${day}.${year}  ${hh}:${mm}`);
