@@ -2197,3 +2197,30 @@ function numberOfDays(year, month) {
 }
 numberOfDays();
 alert(`${year}, ${month}, ${whatIsIt}`);
+console.log(itCompanies);
+console.log(itCompanies.length);
+console.log(itCompanies[0]);
+console.log(itCompanies[(itCompanies.length - 1) / 2]);
+console.log(itCompanies[itCompanies.length - 1]);
+console.log(itCompanies[0]);
+console.log(itCompanies[1]);
+console.log(itCompanies[2]);
+console.log(itCompanies[3]);
+console.log(itCompanies[4]);
+console.log(itCompanies[5]);
+console.log(itCompanies[6]);
+console.log(itCompanies.toString().toLocaleUpperCase());
+console.log(itCompanies[0].toLocaleUpperCase());
+console.log(itCompanies[1].toLocaleUpperCase());
+console.log(itCompanies[2].toLocaleUpperCase());
+console.log(itCompanies[3].toLocaleUpperCase());
+console.log(itCompanies[4].toLocaleUpperCase());
+console.log(itCompanies[5].toLocaleUpperCase());
+console.log(itCompanies[6].toLocaleUpperCase());
+itCompanies.splice(5, 2, "Oracle and Amazon");
+console.log(itCompanies.toString());
+let comp = prompt("enter company");
+let index = itCompanies.indexOf(comp);
+index === -1
+  ? alert("that company dose not exist")
+  : alert("the company does exist");
