@@ -2383,3 +2383,85 @@ for (let i = 0; i <= 10; i++) {
   }
   console.log(i);
 }
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FizzBuzz");
+//   } else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   } else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   } else {
+//     console.log(i);
+//   }
+// }
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
+// for (let i = 10; i >= 0; i--) {
+//   console.log(i);
+// }
+// const meArr = ["nico", "fuentes", 34, 1989];
+// const newMeArr = [];
+// for (let i = 0; i < meArr.length; i++) {
+//   newMeArr.push(meArr[i]);
+// }
+// console.table(newMeArr);
+// const num = [1, 2, 3, 4, 5];
+// const newNumArr = [];
+// for (let i = 0; i < num.length; i++) {
+//   newNumArr.push(num[i] * 2);
+// }
+// console.log(newNumArr);
+// let i = 0;
+// while (i <= 10) {
+//   console.log(i);
+//   i++;
+// }
+// let i = 10;
+// while (i >= 0) {
+//   console.log(i);
+//   i--;
+// }
+// let i = 0;
+// do {
+//   console.log(i);
+//   i++;
+// } while (i <= 10);
+// let i = 10;
+// do {
+//   console.log(i);
+//   i--;
+// } while (i >= 0);
+// for (let i = 0; i <= 100; i = i + 2) {
+//   console.log(i);
+// }
+// for (let i = 1; i <= 100; i = i + 2) {
+//   console.log(i);
+// }
+// let sum = 0;
+// for (let i = 0; i <= 100; i++) {
+//   sum += i;
+// }
+// console.log(sum);
+// let sum = 0;
+// for (let i = 0; i <= 100; i = i + 2) {
+//   sum += i;
+// }
+// console.log(sum);
+// let sum = 0;
+// for (let i = 1; i <= 100; i = i + 2) {
+//   sum += i;
+// }
+// console.log(sum);
+// const nums = [1, 2, 3, 4, 5];
+// let sum = 0;
+// for (let i = 0; i <= nums.length; i++) {
+//   sum += nums[i];
+// }
+// console.log(sum);
+// const webTechs = ["HTML", "CSS", "JavaScript", "Three.js", "Node", "Blender"];
+// for (const tech of webTechs) {
+//   console.log(tech, tech.length, tech.toUpperCase());
+// }
+const nums = [1, 2, 3, 4, 5];
+nums.forEach();
