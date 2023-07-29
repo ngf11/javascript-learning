@@ -2482,3 +2482,98 @@ const user = {
 for (const key in user) {
   console.log(key, user[key]);
 }
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
+// let i = 0;
+// while (i <= 10) {
+//   console.log(i);
+//   i++;
+// }
+// do {
+//   console.log(i);
+//   i++;
+// } while (i <= 9);
+// for (let i = 10; i >= 0; i--) {
+//   console.log(i);
+// }
+// let i = 11;
+// while (i >= 0) {
+//   console.log(i);
+//   i--;
+// }
+// do {
+//   console.log(i);
+//   i--;
+// } while (i >= 1);
+// const num = 10;
+// for (let i = 1; i <= num; i++) {
+//   let row = "";
+//   for (let j = 1; j <= i; j++) {
+//     row += "#";
+//   }
+//   console.log(row);
+// }
+// const pattern = 10;
+// for (let i = 1; i <= pattern; i--) {
+//   let fila = "";
+//   for (let j = 1; j <= i; j--) {
+//     fila += "$";
+//   }
+//   console.log(fila);
+// }
+// for (let i = 0; i <= 10; i++) {
+//   console.log(`${i}x${i}= ${i * i}`);
+// }
+// for (let i = 0; i <= 10; i++) {
+//   console.log(`${i}\t${i * i}\t${i * i * i}`);
+// }
+// for (let i = 0; i <= 100; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// for (let i = 0; i <= 100; i++) {
+//   if (i % 2 !== 0) {
+//     console.log(i);
+//   }
+// }
+// let sum = 0;
+// for (let i = 0; i <= 100; i++) {
+//   sum += i;
+// }
+// console.log(`The sum of all numbers from 0 to 100 is ${sum}.`);
+// let add = 0;
+// let sum = 0;
+// for (let i = 0; i <= 100; i++) {
+//   if (i % 2 !== 0) {
+//     add += i;
+//   }
+// }
+// for (let i = 0; i <= 100; i++) {
+//   if (i % 2 === 0) {
+//     sum += i;
+//   }
+// }
+// console.log(
+//   `The sum of all evens from 0 to 100 is ${sum}. And the sum of all odds from 0 to 100 is ${add}.`
+// );
+// const sumArr = [];
+// let sum = 0;
+// let add = 0;
+// for (let i = 0; i <= 100; i++) {
+//   if (i % 2 === 0) {
+//     sum += i;
+//   }
+// }
+// for (let i = 0; i <= 100; i++) {
+//   if (i % 2 !== 0) {
+//     add += i;
+//   }
+// }
+// console.log(add);
+// console.log(sum);
+// sumArr.push(add);
+// sumArr.push(sum);
+// console.log(sumArr);
