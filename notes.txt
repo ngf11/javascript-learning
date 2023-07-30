@@ -2577,3 +2577,7 @@ for (const key in user) {
 // sumArr.push(add);
 // sumArr.push(sum);
 // console.log(sumArr);
+// // console.log(codeChar);
+// // console.log(codeChar.length);
+// // console.log(codeChar[random]);
+// console.log(letter);
