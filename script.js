@@ -28,3 +28,12 @@ for (let i = 0; i <= 6; i++) {
 let numLetterStr = numLetterArr.join("");
 console.log(numLetterArr);
 console.log(numLetterStr);
+let longRanNumGen = [];
+let theGenerator = Math.floor(Math.random() * 11);
+for (let i = 0; i <= theGenerator; i++) {
+  let ranLetterNum = Math.floor(Math.random() * numLetter.length);
+  let ranGen = numLetter[ranLetterNum];
+  longRanNumGen.push(ranGen);
+}
+let ranGenStr = longRanNumGen.join("");
+console.log(ranGenStr);
