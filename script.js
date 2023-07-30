@@ -7,3 +7,24 @@ for (let i = 0; i <= 5; i++) {
   randomLetterArray.push(letter);
 }
 console.log(randomLetterArray);
+const nums = "1234567890";
+let splitNums = nums.split("");
+// console.log(splitNums);
+let randomNumArr = [];
+for (let i = 0; i <= 5; i++) {
+  let randomNum = Math.floor(Math.random() * splitNums.length);
+  let num = splitNums[randomNum];
+  randomNumArr.push(num);
+}
+console.log(randomNumArr);
+// console.log(numLetter);
+let numLetter = codeChar.concat(splitNums);
+let numLetterArr = [];
+for (let i = 0; i <= 6; i++) {
+  let ranLetterNum = Math.floor(Math.random() * numLetter.length);
+  let letNum = numLetter[ranLetterNum];
+  numLetterArr.push(letNum);
+}
+let numLetterStr = numLetterArr.join("");
+console.log(numLetterArr);
+console.log(numLetterStr);
