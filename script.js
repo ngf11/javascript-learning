@@ -74,42 +74,13 @@ const webTechs = [
 ];
 
 const mernStack = ["MongoDB", "Express", "React", "Node"];
-const newCountries = [];
-const landCountries = [];
-const iaCountries = [];
-// for (const country of countries) {
-//   newCountries.push(country.toUpperCase());
-// }
-// console.log(newCountries);
-// for (const country of countries) {
-//   newCountries.push(country.length);
-// }
-// console.log(newCountries);
-// for (const country of countries) {
-//   newCountries.push([country, country.toUpperCase(), country.length]);
-// }
-// console.log(newCountries);
-// for (const country of countries) {
-//   if (country.includes("land")) {
-//     landCountries.push(country);
-//   } else {
-//     newCountries.push(country);
-//   }
-// }
-// for (const country of countries) {
-//   if (country.endsWith("ia")) {
-//     iaCountries.push(country);
-//   }
-// }
-// console.log(landCountries);
-// console.log(newCountries);
-// console.log(iaCountries);
-const countryNum = [];
-for (const country of countries) {
-  countryNum.push(country.length);
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+let fullStackStr;
+for (const stack of fullStack) {
+  stack.join(", ");
+  fullStackStr = stack;
 }
-const nameLength = Math.max(...countryNum);
-const longestCountry = countries[nameLength]; //wrong
-console.log(countryNum);
-console.log(nameLength);
-console.log(longestCountry);
+console.log(fullStackStr);

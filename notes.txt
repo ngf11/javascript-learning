@@ -2659,3 +2659,93 @@ console.log(ranGenStr);
 // }
 // let ranGenStr = longRanNumGen.join("");
 // console.log(ranGenStr);
+const newCountries = [];
+// const landCountries = [];
+// const iaCountries = [];
+// // for (const country of countries) {
+// //   newCountries.push(country.toUpperCase());
+// // }
+// // console.log(newCountries);
+// // for (const country of countries) {
+// //   newCountries.push(country.length);
+// // }
+// // console.log(newCountries);
+// // for (const country of countries) {
+// //   newCountries.push([country, country.toUpperCase(), country.length]);
+// // }
+// // console.log(newCountries);
+// // for (const country of countries) {
+// //   if (country.includes("land")) {
+// //     landCountries.push(country);
+// //   } else {
+// //     newCountries.push(country);
+// //   }
+// // }
+// // for (const country of countries) {
+// //   if (country.endsWith("ia")) {
+// //     iaCountries.push(country);
+// //   }
+// // }
+// // console.log(landCountries);
+// // console.log(newCountries);
+// // console.log(iaCountries);
+// // const countryNum = [];
+// // for (const country of countries) {
+// //   countryNum.push(country.length);
+// // }
+// // const nameLength = Math.max(...countryNum);
+// // // const longestCountry = countries[nameLength]; //wrong
+// // function longest(countries, nameLength) {
+// //   if (countries.length == nameLength) {
+// //     consol.log(countries);
+// //   }
+// // }
+// // longest();
+// // console.log(countryNum);
+// // console.log(nameLength);
+// // console.log(longestCountry);
+// // console.log(longestCountry);
+// let longestCountry = []; // Assume the first country has the longest name initially
+
+// for (let i = 1; i < countries.length; i++) {
+//   if (countries[i].length > longestCountry.length) {
+//     longestCountry = countries[i];
+//   }
+// }
+// console.log(longestCountry);
+// let fiveChar = [];
+// for (let i = 1; i < countries.length; i++) {
+//   if (countries[i].length === 5) {
+//     fiveChar.push(countries[i]);
+//   }
+// }
+// console.log(fiveChar);
+// let longestTechName = [];
+// for (let i = 1; i < webTechs.length; i++) {
+//   if (webTechs[i].length > longestTechName.length) {
+//     longestTechName = webTechs[i];
+//   }
+// }
+// console.log(longestTechName);
+// const tecnologia = [];
+// for (const tech of webTechs) {
+//   tecnologia.push([tech, tech.length]);
+// }
+// console.log(tecnologia);
+// for (const tech of mernStack) {
+//   console.log(tech[0]);
+// }
+// for (const tech of webTechs) {
+//   console.log(tech.toString(""));
+// }
+// const fruits = ["banana", "orange", "mango", "lemon"];
+// const reversedFruits = [];
+// for (let i = fruits.length - 1; i >= 0; i--) {
+//   const valueOfIndex = fruits[i];
+//   reversedFruits.push(valueOfIndex);
+// }
+// console.log(reversedFruits);
+// const fullStack = [
+//   ["HTML", "CSS", "JS", "React"],
+//   ["Node", "Express", "MongoDB"],
+// ];
