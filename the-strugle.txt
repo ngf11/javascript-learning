@@ -31,3 +31,12 @@ for (let i = 1; i < webTechs.length; i++) {
     longestTech = webTechs[i];
   }
 }
+----------
+FIND OUT HOW TO REVERSE AND SORT ARRAY IN A LOOP
+
+let RevDevArr = [];
+for (let i = countries.length - 1; i >= 0; i--) {
+  let index = countries[i];
+  RevDevArr.push(index.toUpperCase());
+}
+console.log(RevDevArr.sort());
