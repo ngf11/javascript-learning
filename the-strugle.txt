@@ -1,0 +1,33 @@
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+
+for (let i = 0; i < fullStack.length; i++) {
+  for (let j = 0; j < fullStack[i].length; j++) {
+    console.log(fullStack[i][j]);
+  }
+}
+HTML
+CSS
+JS
+React
+Node
+Express
+MongoDB
+------------
+const fruit = ["banana", "orange", "mango", "lemon"];
+const revfruit = [];
+for (let i = fruit.length - 1; i >= 0; i--) {
+  let index = fruit[i];
+  revfruit.push(index);
+}
+
+----------
+THE LONGEST IN AN ARRAY 
+let longestTech = [];
+for (let i = 1; i < webTechs.length; i++) {
+  if (webTechs[i].length > longestTech.length) {
+    longestTech = webTechs[i];
+  }
+}

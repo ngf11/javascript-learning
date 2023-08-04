@@ -1,52 +1,110 @@
-const numbres = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-// const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const letters = "abcdefghijklmnopqrstuvwxyz";
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
 
-const letterSplit = letters.split("");
-// console.log(letterSplit);
-const password = [];
-for (let i = 0; i < 5; i++) {
-  let randomLetter = Math.floor(Math.random() * letterSplit.length);
-  password.push(letterSplit[randomLetter]);
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+const mernStack = ["MongoDB", "Express", "React", "Node"];
+const countriesUpper = [];
+for (const country of countries) {
+  countriesUpper.push(country.toUpperCase());
 }
-console.log(password);
-const randomNums = [];
-for (let i = 0; i < 5; i++) {
-  let randomNum = Math.floor(Math.random() * numbres.length);
-  randomNums.push(numbres[randomNum]);
+console.log(countriesUpper);
+const countriesLength = [];
+for (const country of countries) {
+  countriesLength.push(country.length);
 }
-console.log(randomNums);
-const letterNums = numbres.concat(letterSplit);
-const randomID = [];
-console.log(letterNums);
-for (let i = 0; i < 6; i++) {
-  let randomLettersNums = Math.floor(Math.random() * letterNums.length);
-  randomID.push(letterNums[randomLettersNums]);
+console.log(countriesLength);
+const countriesInfo = [];
+for (const country of countries) {
+  countriesInfo.push([
+    country,
+    country.toUpperCase().substring(0, 3),
+    country.length,
+  ]);
 }
-console.log(randomID.join(""));
-const passwordRandom = [];
-let randomLength = Math.floor(Math.random() * 11 * 2);
-for (let i = 0; i <= randomLength; i++) {
-  let randomLettersNums = Math.floor(Math.random() * letterNums.length);
-  passwordRandom.push(letterNums[randomLettersNums]);
+console.log(countriesInfo);
+const countriesWithLand = [];
+for (const country of countries) {
+  if (country.includes("land")) {
+    countriesWithLand.push(country);
+  }
 }
-let strPass = passwordRandom.join("");
-console.log(strPass);
-const hex = ["a", "b", "c", "d", "e", "f", 1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-const hexDesArr = [];
-for (let i = 0; i < 6; i++) {
-  let randomLettersNums = Math.floor(Math.random() * hex.length);
-  hexDesArr.push(hex[randomLettersNums]);
+console.log(countriesWithLand);
+const countriesWithIa = [];
+for (const country of countries) {
+  if (country.endsWith("ia")) {
+    countriesWithIa.push(country);
+  }
 }
-let strHexDes = hexDesArr.join("");
-let hexDecRespond = `#${strHexDes}`;
-// console.log(hexDesArr);
-console.log(hexDecRespond);
-const rgb = [];
-for (let i = 0; i < 3; i++) {
-  let rgbRandom = Math.floor(Math.random() * 255);
-  rgb.push(rgbRandom);
+console.log(countriesWithIa);
+const countriesLengthFive = [];
+for (const country of countries) {
+  if (country.length === 5) {
+    countriesLengthFive.push(country);
+  }
 }
-console.log(rgb);
-let rgbRandomRespond = `rgb(${rgb})`;
-console.log(rgbRandomRespond);
+console.log(countriesLengthFive);
+let longestCountry = [];
+for (let i = 1; i < countries.length; i++) {
+  if (countries[i].length > longestCountry.length) {
+    longestCountry = countries[i];
+  }
+}
+console.log(longestCountry);
+let longestTech = [];
+for (let i = 1; i < webTechs.length; i++) {
+  if (webTechs[i].length > longestTech.length) {
+    longestTech = webTechs[i];
+  }
+}
+console.log(longestTech);
+const webTechsInfo = [];
+for (const tech of webTechs) {
+  webTechsInfo.push([tech, tech.length]);
+}
+console.log(webTechsInfo);
+const mernArr = [];
+for (const mern of mernStack) {
+  mernArr.push(mern[0]);
+}
+console.log(mernArr);
+let mernStr = mernArr.join("");
+console.log(mernStr);
+const fruit = ["banana", "orange", "mango", "lemon"];
+const revfruit = [];
+for (let i = fruit.length - 1; i >= 0; i--) {
+  let index = fruit[i];
+  revfruit.push(index);
+}
+console.log(revfruit);
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+for (const stack of fullStack) {
+  console.log(stack);
+}
+for (let i = 0; i < fullStack.length; i++) {
+  for (let j = 0; j < fullStack[i].length; j++) {
+    console.log(fullStack[i][j]);
+  }
+}
