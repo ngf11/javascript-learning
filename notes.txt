@@ -3296,3 +3296,63 @@ console.log(!(4 > 3 && 10 < 12), false);
 console.log(!(4 > 3 && 10 > 12), true);
 console.log(!(4 === "4"), true);
 console.log(!("python".includes("on"), "dragon".includes("on")));
+// let base = prompt("Enter the base of the trinagle");
+// let height = prompt("Enter the height of the trinagle");
+// let area = alert(
+//   `Enter base: ${base}\nEnter height: ${height}\nArea of the triangle: ${
+//     base * height * 0.5
+//   }`
+// );
+// let sideA = prompt("Enter side A");
+// let sideB = prompt("Enter side B");
+// let sideC = prompt("Enter side C");
+// let paramiter = alert(
+//   `Enter side A: ${sideA}\nEnter side B: ${sideB}\n Enter side C: ${sideC}\n paramiter : ${
+//     parseFloat(sideA) + parseFloat(sideB) + parseFloat(sideC)
+//   }`
+// );
+// let legnth = prompt("Enter the length of the rectangle");
+// let width = prompt("Enter the width of the rectangle");
+// let areaAndPara = alert(
+//   `Enter length: ${legnth}\nEnter width: ${width}\nArea of the rectangle: ${
+//     legnth * width
+//   }\nParamiter of the rectangle${2 * (parseFloat(legnth) + parseFloat(width))}`
+// );
+// let radius = prompt("Enter the radius of the circle");
+// const PI = 3.14;
+// let cirmArea = alert(
+//   `Enter radius: ${radius}\nArea:${PI * radius * radius}\nCricumferences:${
+//     2 * PI * radius
+//   }`
+// );
+// let hours = prompt("Enter hours worked");
+// let rate = prompt("Enter your rate per hour");
+// let earnings = alert(
+//   `Enter hours: ${hours}\nEnter rate:${rate}\nYour earning: ${hours * rate}`
+// );
+// let names = prompt("Enter your name");
+// let nameLength =
+//   names.length >= 7 ? alert("Your name is long") : alert("Your name is short");
+// let firstName = prompt("Enter your first name");
+// let lastName = prompt("enter your last name");
+// if (firstName.length > lastName.length) {
+//   alert(
+//     `Your first name ${firstName} is longer the your last name ${lastName}`
+//   );
+// } else {
+//   alert(
+//     `Your last name ${lastName} is longer the your first name ${firstName}`
+//   );
+// }
+// let myAge = 68;
+// let yourAge = 34;
+// console.log(`I am ${myAge - yourAge} years older then you`);
+// let yourYear = prompt("Enter the year you were born");
+// let canYouDrive =
+//   year - yourYear >= 18
+//     ? alert("You can drive")
+//     : alert(
+//         `Your are ${year - yourYear} years old. You have ${
+//           18 - (year - yourYear)
+//         } years left to drive`
+//       );
