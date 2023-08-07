@@ -1,1 +1,13 @@
-//js day 2
+const now = new Date();
+console.log(now);
+let year = now.getFullYear();
+console.log(year);
+let month = now.getMonth();
+console.log(month);
+let day = now.getDate();
+console.log(day);
+let date = now.getDay();
+console.log(date);
+let secondsTillNow = now.getTime();
+console.log(secondsTillNow);
+let base = prompt();
