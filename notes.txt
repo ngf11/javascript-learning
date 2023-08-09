@@ -3475,3 +3475,80 @@ console.log(
       return a + b;
     })
 );
+// Day 4
+// let enterAge = prompt("Enter your age");
+// let canDrive =
+//   enterAge >= 18
+//     ? alert(`You are ${enterAge} years old. you can drive`)
+//     : alert(
+//         `You are ${enterAge} years old. You can not dirve. You have to wait ${
+//           18 - enterAge
+//         } `
+//       );
+// const myAge = 34;
+// let yourAge = prompt("How old are you?");
+// if (myAge < yourAge) {
+//   alert(
+//     `Enter age: ${yourAge}\nYou are older the me  by ${yourAge - myAge} years`
+//   );
+// } else if (myAge > yourAge) {
+//   alert(
+//     `Enter age: ${yourAge}\nI am older the you by ${myAge - yourAge} years`
+//   );
+// } else {
+//   alert(`Enter age: ${yourAge}\nWe are the same age`);
+// }
+// let a = 4;
+// let b = 9;
+// let daBiggest =
+//   a > b
+//     ? console.log(`${a} is greater the ${b}`)
+//     : console.log(`${b} is greater the ${a}`);
+// let num = prompt("enter a number");
+// if (num % 2 === 0) {
+//   alert(`Enter number: ${num}\n${num} is an even number`);
+// } else {
+//   alert(`Enter number: ${num}\n${num} is an odd number`);
+// }
+// let grade = prompt("Enter your grade");
+// switch (true) {
+//   case grade >= 90:
+//     alert("A");
+//     break;
+//   case grade >= 80:
+//     alert("B");
+//     break;
+//   case grade >= 70:
+//     alert("C");
+//     break;
+//   case grade >= 60:
+//     alert("D");
+//     break;
+//   default:
+//     alert("F");
+// }
+// Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
+//let month = prompt("What month is it?");
+// let mm = month.toLowerCase();
+// switch (true) {
+//   case mm == "september" || mm == "october" || mm == "november":
+//     alert("The season is Autumn.");
+//     break;
+//   case mm == "december" || mm == "january" || mm == "february":
+//     alert("The season is Winter.");
+//     break;
+//   case mm == "march" || mm == "april" || mm == "may":
+//     alert("The season is Spring");
+//     break;
+//   case mm == "june" || mm == "july" || mm == "august":
+//     alert("The season is Summer");
+//   default:
+//     alert("That is not a month");
+// }
+// const day = new Date().getDay();
+// console.log(day);
+// if (day === 1 || day === 2 || day === 3 || day === 4 || day === 50) {
+//   console.log("Is a week day. Work Day!!!!");
+// } else {
+//   console.log("Is the weekend,Live it up");
+// }
