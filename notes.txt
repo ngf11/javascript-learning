@@ -3552,3 +3552,49 @@ console.log(
 // } else {
 //   console.log("Is the weekend,Live it up");
 // }
+// let month = prompt("What month is");
+// let mm = month.toLowerCase();
+// switch (true) {
+//   case mm == "december" ||
+//     mm == "january" ||
+//     mm == "march" ||
+//     mm == "may" ||
+//     mm == "july" ||
+//     mm == "august" ||
+//     mm == "october":
+//     alert(`Enter Month: ${month}\n${mm} has 31 days`);
+//     break;
+//   case month == "febuary":
+//     alert(`Enter Month: ${month}\n${mm} has 28 or 29 days`);
+//     break;
+//   case mm == "april" || mm == "june" || mm == "september" || mm == "november":
+//     alert(`Enter Month: ${month}\n${mm} has 30 days`);
+//     break;
+//   default:
+//     alert("That is not a month");
+// }
+const month = prompt("Enter the number of the month");
+const year = prompt("Enter the year");
+let daysIn = numOfDays(month, year);
+function leap(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+}
+function numOfDays(month, year) {
+  const days = {
+    1: 31,
+    2: leap(year) ? 29 : 28,
+    3: 31, // March
+    4: 30, // April
+    5: 31, // May
+    6: 30, // June
+    7: 31, // July
+    8: 31, // August
+    9: 30, // September
+    10: 31, // October
+    11: 30, // November
+    12: 31, // December
+  };
+  return days[month];
+}
+numOfDays();
+alert(`${month} in ${year} was ${daysIn}`);
