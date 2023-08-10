@@ -76,3 +76,11 @@ if (index == -1) {
   alert(`${itCompanies[index]} does exist`);
 }
 -------------
+for (let i = 1; i <= 10; i++) {
+  let outPut = "";
+  for (let j = 1; j < i; j++) {
+    outPut += "#";
+  }
+  console.log(outPut);
+}
+---------

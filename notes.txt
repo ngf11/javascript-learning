@@ -3659,3 +3659,73 @@ if (index == -1) {
 } else {
   alert(`${itCompanies[index]} does exist`);
 }
+const itCompanies = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+// itCompanies.sort();
+// // console.log(itCompanies);
+// console.log(itCompanies.sort());
+// console.log(itCompanies.sort().reverse());
+// itCompanies.slice(0, 3);
+// itCompanies.splice(0, 3);
+// itCompanies.splice(1, 3);
+// itCompanies.splice(0, 1);
+// console.log(itCompanies);
+itCompanies.shift();
+itCompanies.splice((itCompanies.length - 1) / 2, 1);
+itCompanies.pop();
+itCompanies.splice(0, itCompanies.length);
+console.log(itCompanies);
+let index = countries.indexOf("Ethiopia");
+if (index == -1) {
+  console.log("it dosen't Exist");
+} else {
+  console.log(countries[index].toUpperCase());
+}
+// webTechs.splice(2, 0, "Sass");
+let cssFrameWork = "Sass";
+let sass = webTechs.indexOf(cssFrameWork);
+if (sass == -1) {
+  webTechs.splice(2, 0, cssFrameWork);
+} else {
+  console.log(`${cssFrameWork} does exist`);
+}
+console.log(webTechs);
+const frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd = ["Node", "Express", "MongoDB"];
+const fullStack = frontEnd.concat(backEnd);
+console.log(fullStack);
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages.sort();
+let min = Math.min(...ages);
+let max = Math.max(...ages);
+let ave = ages.reduce(function ave(a, b) {
+  return Math.round((a + b) / ages.length);
+});
+let range = max - min;
+console.log(ages);
+// console.log(min);
+// console.log(max);
+console.log(ave);
+let text =
+  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+let newText = text.replace(/[^\w\s]|_/g, "");
+let wors = newText.split(" ");
+console.log(newText);
+console.log(wors);
+console.log(wors.length);
+const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
+shoppingCart.unshift("Meat");
+shoppingCart.push("Sugar");
+shoppingCart.splice(4, 1);
+shoppingCart.splice(3, 1, "Green Tea");
+console.log(shoppingCart);
+console.log(countries.length);
+console.log(countries.splice(9, 10));
+console.log(countries[(countries.length - 1) / 2]);
