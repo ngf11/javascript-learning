@@ -66,3 +66,13 @@ function numOfDays(month, year) {
 }
 numOfDays();
 alert(`${month} in ${year} was ${daysIn}`);
+------------
+find out if a something does exist in the arry
+let enterCorp = prompt("Enter a company name");
+let index = itCompanies.indexOf(enterCorp);
+if (index == -1) {
+  alert("this company dose not exist");
+} else {
+  alert(`${itCompanies[index]} does exist`);
+}
+-------------
