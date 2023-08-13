@@ -84,3 +84,11 @@ for (let i = 1; i <= 10; i++) {
   console.log(outPut);
 }
 ---------
+print arry items in difernt lines
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+for (let i = fullStack.length; i < fullStack.length; i++) {
+  console.log(i);
+}

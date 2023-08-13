@@ -64,3 +64,73 @@ for (let i = 0; i < webTechs.length; i++) {
   }
 }
 console.log(longestTech);
+for (const tech of webTechs) {
+  console.log([tech, tech.length]);
+}
+for (const mern of mernStack) {
+  console.log(mern[0]);
+}
+// const webTechInAllCaps = [];
+// // for (let i = 0; i < webTechs.length; i++) {
+// //   webTechInAllCaps.push(webTechs.toUpperCase());
+// // }
+// for (const web of webTechs) {
+// }
+// console.log(webTechInAllCaps);
+const fruit = ["banana", "orange", "mango", "lemon"];
+let revFruit = [];
+for (let i = fruit.length - 1; i >= 0; i--) {
+  let index = fruit[i];
+  revFruit.push(index);
+}
+console.log(revFruit);
+// const fullStack = [
+//   ["HTML", "CSS", "JS", "React"],
+//   ["Node", "Express", "MongoDB"],
+// ];
+// let fullStackUpper = [];
+// for (const stack of fullStack) {
+//   console.log(stack.join());
+//   // fullStackUpper.push(stack);
+// }
+// // fullStackUpper.toUpperCase();
+// // console.log(fullStackUpper);
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+for (const stack of fullStack) {
+  for (const item of stack) {
+    console.log(item);
+  }
+}
+for (let i = fullStack.length; i < fullStack.length; i++) {
+  console.log(i);
+}
+const newCOuntries = [];
+for (const country of countries) {
+  newCOuntries.push(country);
+}
+console.log(newCOuntries);
+const sortedNewCountries = newCOuntries.sort();
+console.log(sortedNewCountries);
+const allTechArr = webTechs.concat(mernStack).sort();
+console.log(allTechArr);
+let longestCountry = [];
+for (let i = 1; i < countries.length; i++) {
+  if (countries[i].length > longestCountries.length) {
+    longestCountries = countries[i];
+  }
+}
+console.log(longestCountries);
+for (const country of countries) {
+  if (country.includes("land")) {
+    console.log(country);
+  }
+}
+let revcCountry = [];
+for (let i = countries.length - 1; i >= 0; i--) {
+  let index = countries[i];
+  revcCountry.push(index);
+}
+console.log(revcCountry);
