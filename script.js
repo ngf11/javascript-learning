@@ -1,48 +1,57 @@
-function fullName(firstName, lastName) {
-  return `Hi, My name is ${firstName} ${lastName}`;
+// let month = prompt("What month is it?");
+// function checkSeason(month) {
+//   if (month == "december" || month == "janaury" || month === "febuary") {
+//     alert("Winter");
+//   } else if (month == "march" || month == "april" || month == "may") {
+//     alert("Spring");
+//   } else if (month == "june" || month == "july" || month == "agoust") {
+//     alert("Summer");
+//   } else if (
+//     month == "september" ||
+//     month == "october" ||
+//     month == "november"
+//   ) {
+//     alert("Fall");
+//   } else {
+//     alert("not a valid");
+//   }
+// }
+// checkSeason();
+function findMax(...arg) {
+  return Math.max(...arg);
 }
-console.log(fullName("Nicolas", "Fuentes"));
-const name = function (firstName, lastName) {
-  return `Hi, My name is ${firstName} ${lastName}`;
-};
-console.log(name("Didi", "tinti"));
-const datName = (firstName, lastName) =>
-  `Hi, My name is ${firstName} ${lastName}`;
-console.log(datName("Didi", "Wu"));
-function add(a, b) {
-  return a + b;
+console.log(findMax(10, 1, 22, 369));
+function printArr(arr) {
+  for (const element of arr) {
+    console.log(element);
+  }
 }
-console.log(add(10, 1));
-const areaOfARectangle = (length, width) => {
-  return length * width;
-};
-console.log(areaOfARectangle(10, 4));
-function permimeterOfARectangle(length, width) {
-  return 2 * (length + width);
+const nums = [1, 2, 3, 4, 5];
+const nico = ["Nicolas", "Funtes", "didi", "wu"];
+printArr(nums);
+printArr(nico);
+function showDateTime() {
+  const now = new Date();
+  let day = now.getDay();
+  let month = now.getMonth();
+  let year = now.getFullYear();
+  let hh = now.getHours();
+  let mm = now.getMinutes();
+  if (day < 10) {
+    day = "0" + day;
+  }
+  if (month < 10) {
+    month = "0" + month;
+  }
+  if (hh < 10) {
+    hh = "0" + hh;
+  }
+  if (hh > 12) {
+    hh = hh - 12;
+  }
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
+  return `${month}/${day}/${year} ${hh}:${mm}`;
 }
-console.log(permimeterOfARectangle(10, 4));
-function volumeOfPrism(length, width, height) {
-  return length * width * height;
-}
-console.log(volumeOfPrism(10, 4, 2));
-const areaOfACircl = (redius) => {
-  return Math.PI * redius * redius;
-};
-console.log(areaOfACircl(15));
-const circumOfCircle = (redius) => {
-  return 2 * (Math.PI * redius);
-};
-console.log(circumOfCircle(15));
-const densityOfASubstance = (mass, volume) => {
-  return mass / volume;
-};
-function speedOfObject(distance, time) {
-  return distance / time;
-}
-function weightOf(mass, gravity) {
-  return mass * gravity;
-}
-const convertCelsiusToFahrenheit = (celsius) => {
-  return celsius * 1.8 + 32;
-};
-console.log(convertCelsiusToFahrenheit(30));
+console.log(showDateTime());
