@@ -92,3 +92,13 @@ const fullStack = [
 for (let i = fullStack.length; i < fullStack.length; i++) {
   console.log(i);
 }
+---------
+
+function swapValues(x, y) {
+  let temp = x;
+  x = y;
+  y = temp;
+
+  return `x => ${x}, y => ${y}`;
+}
+console.log(swapValues(4, 3));

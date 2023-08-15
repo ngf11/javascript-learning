@@ -1,57 +1,46 @@
-// let month = prompt("What month is it?");
-// function checkSeason(month) {
-//   if (month == "december" || month == "janaury" || month === "febuary") {
-//     alert("Winter");
-//   } else if (month == "march" || month == "april" || month == "may") {
-//     alert("Spring");
-//   } else if (month == "june" || month == "july" || month == "agoust") {
-//     alert("Summer");
-//   } else if (
-//     month == "september" ||
-//     month == "october" ||
-//     month == "november"
-//   ) {
-//     alert("Fall");
-//   } else {
-//     alert("not a valid");
-//   }
-// }
-// checkSeason();
-function findMax(...arg) {
-  return Math.max(...arg);
+function swapValues(x, y) {
+  let temp = x;
+  x = y;
+  y = temp;
+
+  return `x => ${x}, y => ${y}`;
 }
-console.log(findMax(10, 1, 22, 369));
-function printArr(arr) {
-  for (const element of arr) {
-    console.log(element);
+console.log(swapValues(4, 3));
+const reverseArray = (arr) => {
+  let revArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    let index = arr[i];
+    revArr.push(index);
   }
+  return revArr;
+};
+console.log(reverseArray([1, 2, 3, 4, 5]));
+//[5, 4, 3, 2, 1]
+console.log(reverseArray(["A", "B", "C"]));
+//['C', 'B', 'A']
+function capitalizeArray(arr) {
+  let arrCap = [];
+  for (const items of arr) {
+    arrCap.push(items.toUpperCase());
+  }
+  return arrCap;
 }
-const nums = [1, 2, 3, 4, 5];
-const nico = ["Nicolas", "Funtes", "didi", "wu"];
-printArr(nums);
-printArr(nico);
-function showDateTime() {
-  const now = new Date();
-  let day = now.getDay();
-  let month = now.getMonth();
-  let year = now.getFullYear();
-  let hh = now.getHours();
-  let mm = now.getMinutes();
-  if (day < 10) {
-    day = "0" + day;
+const user = ["nico", "fuentes", "didi", "wu", "tinti"];
+console.log(capitalizeArray(user));
+function sumOfNumbers(arr) {
+  let sum = 0;
+  for (let i = 0; i <= arr.length; i++) {
+    sum += i;
   }
-  if (month < 10) {
-    month = "0" + month;
-  }
-  if (hh < 10) {
-    hh = "0" + hh;
-  }
-  if (hh > 12) {
-    hh = hh - 12;
-  }
-  if (mm < 10) {
-    mm = "0" + mm;
-  }
-  return `${month}/${day}/${year} ${hh}:${mm}`;
+  return sum;
 }
-console.log(showDateTime());
+console.log(sumOfNumbers([1, 2, 3, 4, 5]));
+function removeItem(arr) {
+  let empty = [];
+  for (let i = 0; i <= arr.length; i++) {
+    empty = arr.splice(0, arr.length - 1);
+  }
+  return empty;
+}
+console.log(removeItem([1, 2, 3, 4, 5]));
+function addItem(item) {}
