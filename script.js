@@ -56,3 +56,25 @@
 // console.log(userIdGeneratorUser());
 // console.log(typeof numUserIDsGenerated);
 // console.log(typeof numNumberOfCharacters);
+const rgbColorGenerator = () => {
+  let rgb = [];
+  for (let i = 0; i < 3; i++) {
+    const random = Math.floor(Math.random() * 256);
+    rgb.push(random);
+  }
+  return `rgb(${rgb.join(", ")})`;
+};
+console.log(rgbColorGenerator());
+let rgbColorGeneratorArry = () => {
+  let num = parseInt(prompt("How many colors do you need?"));
+  let rgb = "".split(", ");
+  for (let i = 0; i < num; i++) {
+    for (let j = 0; j <= 3; j++) {
+      let random = Math.floor(Math.random() * 256);
+      rgb += random;
+    }
+  }
+  return rgb;
+};
+rgbColorGeneratorArry();
+console.log(rgbColorGeneratorArry());
