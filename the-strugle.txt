@@ -102,3 +102,28 @@ function swapValues(x, y) {
   return `x => ${x}, y => ${y}`;
 }
 console.log(swapValues(4, 3));
+---------------
+function userIdGeneratedByUser() {
+  const numberOfCharacters = parseInt(
+    prompt("What is the length of the UserIDs?")
+  );
+  const userIDsGenerated = parseInt(prompt("How many UserIDs?"));
+
+  let lettersNumsSTR =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+  let splitLetterNum = lettersNumsSTR.split("");
+  let userIds = [];
+
+  for (let i = 0; i < userIDsGenerated; i++) {
+    let userId = "";
+    for (let j = 0; j < numberOfCharacters; j++) {
+      let random = Math.floor(Math.random() * splitLetterNum.length);
+      userId += splitLetterNum[random];
+    }
+    userIds.push(userId);
+  }
+
+  return userIds;
+}
+
+console.log(userIdGeneratedByUser());
