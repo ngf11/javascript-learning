@@ -11,5 +11,15 @@
 // };
 // rgbColorGeneratorArry();
 // console.log(rgbColorGeneratorArry());
-const amountHex = prompt("How many colors do you need?");
-const 
+// const amountHex = 5;
+function rgbColorGeneratorArry(amountHex) {
+  let hex = [];
+  for (let i = 0; i < amountHex; i++) {
+    for (let j = 0; j < 3; j++) {
+      let random = Math.floor(Math.random() * 256);
+      hex.push(random);
+    }
+  }
+  return hex;
+}
+console.log(rgbColorGeneratorArry(2));
