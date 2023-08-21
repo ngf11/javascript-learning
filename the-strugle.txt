@@ -127,3 +127,38 @@ function userIdGeneratedByUser() {
 }
 
 console.log(userIdGeneratedByUser());
+-----------------
+function rgbColorGeneratorArry(amountHex) {
+  let hex = [];
+  for (let i = 0; i < amountHex; i++) {
+    let rgbValues = [];
+    for (let j = 0; j < 3; j++) {
+      let random = Math.floor(Math.random() * 256);
+      rgbValues.push(random);
+    }
+    hex.push(rgbValues);
+  }
+  return hex;
+}
+function formatRGB(rgbValues) {
+  return `rgb(${rgbValues.join(", ")})`;
+}
+
+const rgbArray = rgbColorGeneratorArry(4);
+for (const rgbValues of rgbArray) {
+  console.log(formatRGB(rgbValues));
+}
+
+In this code:
+
+The rgbColorGeneratorArry function generates an array of arrays, where each sub-array contains three random RGB values between 0 and 255.
+The formatRGB function takes an array of RGB values and formats it as an rgb(r, g, b) string using the join method to concatenate the values with commas.
+The rgbArray is generated using the rgbColorGeneratorArry function.
+A loop iterates through the rgbArray and uses the formatRGB function to format each set of RGB values and then prints the formatted strings to the console.
+-----------
+
+const rgb2hex = (r, g, b) => {
+  return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+};
+
+console.log(rgb2hex(0, 0, 0));
