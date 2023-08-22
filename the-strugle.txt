@@ -162,3 +162,64 @@ const rgb2hex = (r, g, b) => {
 };
 
 console.log(rgb2hex(0, 0, 0));
+----------
+
+function generateColors(type, amount) {
+  if (type === "hex") {
+    return hexColorGeneratorArry(amount);
+  } else if (type === "rgb") {
+    return rgbColorGeneratorArry(amount);
+  } else {
+    return "that is not a color type nor a amount of colors";
+  }
+}
+function generateColors(type, amount) {
+  if (type === "hex") {
+    return hexColorGeneratorArray(amount);
+  } else if (type === "rgb") {
+    return rgbColorGeneratorArray(amount);
+  } else {
+    return "that is not a color type nor a amount of colors";
+  }
+}
+
+function hexColorGeneratorArray(amountHex) {
+  let hex = [];
+  const hexLetters = [0, 1, 2, 3, 4, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+  for (let i = 0; i < amountHex; i++) {
+    let hexValues = [];
+    for (let j = 0; j < 6; j++) {
+      let random = Math.floor(Math.random() * hexLetters.length);
+      hexValues.push(hexLetters[random]);
+    }
+    hex.push(formatHex(hexValues));
+  }
+  return hex;
+}
+
+function formatHex(hexValues) {
+  return `#${hexValues.join("")}`;
+}
+
+function rgbColorGeneratorArray(amountRGB) {
+  let rgbColors = [];
+  for (let i = 0; i < amountRGB; i++) {
+    let rgbValues = [];
+    for (let j = 0; j < 3; j++) {
+      let random = Math.floor(Math.random() * 256);
+      rgbValues.push(random);
+    }
+    rgbColors.push(formatRGB(rgbValues));
+  }
+  return rgbColors;
+}
+
+function formatRGB(rgbValues) {
+  return `rgb(${rgbValues.join(", ")})`;
+}
+
+console.log(generateColors("hex", 2));
+console.log(generateColors("rgb", 2));
+
+------------
+13
