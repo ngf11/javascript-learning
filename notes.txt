@@ -4447,3 +4447,23 @@ function formatRGB(rgbValues) {
 
 console.log(generateColors("hex", 2));
 console.log(generateColors("rgb", 2));
+function shuffleArray(arr) {
+  let shuffleArr = [];
+  while (arr.length > 0) {
+    let randomIndex = Math.floor(Math.random() * arr.length);
+    let removedItem = arr.splice(randomIndex, 1)[0];
+    shuffleArr.push(removedItem);
+  }
+  return shuffleArr;
+}
+const nico = ["nico", "Fuentes", 34, 1989, "United States"];
+// console.log(nico.length - 1);
+console.log(shuffleArray(nico));
+function factorialize(num) {
+  if (num < 0) return -1;
+  else if (num == 0) return 1;
+  else {
+    return num * factorialize(num - 1);
+  }
+}
+console.log(factorialize(-5));
