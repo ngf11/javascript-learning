@@ -1,5 +1,5 @@
 function isEmpty(item) {
-  if (item.length == 0) {
+  if (item.length == 0 || item == null) {
     return `${item} is empty`;
   }
 }
