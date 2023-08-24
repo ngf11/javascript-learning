@@ -243,4 +243,50 @@ function factorialize(num) {
 }
 console.log(factorialize(-5));
 -----------
-15
+function arryItemsUnique(array) {
+  const uniqueSet = new Set(array);
+  return uniqueSet.size === array.length;
+}
+OR NESTED LOOP:
+function hasDuplicates(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] === array[j]) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+learn set() example:
+const stringArray = ["apple", "banana", "orange", "apple", "grape"];
+const uniqueStrings = new Set(stringArray);
+console.log(uniqueStrings);
+-----------
+same data type arry
+if (array.length === 0) {
+    return true;  // Empty array is considered to have uniform data type.
+  }
+  
+  const firstType = typeof array[0];
+  
+  for (let i = 1; i < array.length; i++) {
+    if (typeof array[i] !== firstType) {
+      return false;  // If any element's type differs, return false.
+    }
+  }
+  
+  return true;  // If all elements have the same type, return true.
+  ---------
+  function isValidVariable(variableName) {
+  // Check if the variable name starts with a letter, $, or _
+  if (!/^[a-zA-Z$_]/.test(variableName)) {
+    return false;
+  }
+  // Check if the rest of the variable name contains only letters, numbers, $, or _
+  if (!/^[a-zA-Z0-9$_]*$/.test(variableName)) {
+    return false;
+  }
+}
+--------
+18
