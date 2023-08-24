@@ -40,16 +40,16 @@ function average(arr) {
 }
 console.log(average(nums));
 const modifyArray = (arr) => {
-  let modifyArr = [];
-  for (const itmes of arr) {
-    if (itmes.length >= 5) {
-      itmes[5] = itmes[5].toUpperCase();
-      modifyArr.push(item);
-      return modifyArr;
-    } else {
-      return "Items not found";
-    }
+  if (arr.length >= 5) {
+    arr[4] = arr[4].toUpperCase();
+    return arr;
+  } else {
+    return "Items not found";
   }
 };
 console.log(modifyArray(["siggy", "didi"]));
-console.log(modifyArray(["siggy", "didi", "nico", "milo", "choad"]));
+console.log(modifyArray(["siggy", "didi", "nico", "milo", "choad", "pija"]));
+function arryItemsUnique(arr) {
+  for (const items of arr) {
+  }
+}
