@@ -4595,3 +4595,89 @@ console.log(reverseCountries(nums));
 console.log(reverseCountries(nico));
 console.log(reverseCountries(fullStack));
 console.log(reverseCountries(randomArr));
+//day 2
+let firstname = "nico";
+let lastname = "Funtes";
+let country = "United States";
+let state = "New Jersey";
+let age = 34;
+let isMarried = false;
+console.log(
+  typeof firstname,
+  typeof lastname,
+  typeof lastname,
+  typeof country,
+  typeof state,
+  typeof age,
+  typeof isMarried
+);
+console.log(typeof "10" === typeof 10);
+console.log(parseInt("9.8") === 10);
+let me = "You are a Softwear developer";
+let nico = true;
+let yourAre = 100;
+let lie = null;
+let poop = undefined;
+let miloBehaivor = 0;
+console.log(4 > 3, true);
+console.log(4 >= 3, true);
+console.log(4 < 3, false);
+console.log(4 <= 3, false);
+console.log(4 == 4, true);
+console.log(4 === 4, true);
+console.log(4 != 4, false);
+console.log(4 !== 4, false);
+console.log(4 != "4", false);
+console.log(4 == "4", true);
+console.log(4 === "4", false);
+console.log("python".length !== "jargon".length);
+console.log(4 > 3 && 10 < 12, true);
+console.log(4 > 3 && 10 > 12, false);
+console.log(4 > 3 || 10 < 12, true);
+console.log(4 > 3 || 10 > 12, true);
+console.log(!(4 > 3), false);
+console.log(!(4 < 3), true);
+console.log(!false, true);
+console.log(!(4 > 3 && 10 < 12), false);
+console.log(!(4 > 3 && 10 > 12), true);
+console.log(!(4 === "4"), true);
+console.log(!"dargon".includes("on"));
+console.log(!"python".includes("on"));
+let scondslapsSince = now.getTime();
+console.log(now);
+console.log(day);
+console.log(scondslapsSince);
+let height = prompt("Enter height of the tringangle");
+let base = prompt("Enter base of the trinagle");
+let area = alert(
+  `Enter base: ${base}\nEnter height: ${height}\nThe area of the triangle is ${
+    base * height * 0.5
+  }`
+);
+let sideA = prompt("Enter side a");
+let sideB = prompt("Enter Side b");
+let sideC = prompt("Enter Side c");
+let permimenterOfTiangle = alert(
+  `Enter side a: ${sideA}\nEnter side b: ${sideB}\nEnter side c: ${sideC}\nThe perimeter of the triangle is ${
+    parseInt(sideA) + parseInt(sideB) + parseInt(sideC)
+  }`
+);
+let length = prompt("Enter the length of the rectangle");
+let width = prompt("Enter the width of the rectangle");
+let areaPermiter = alert(
+  `Enter length: ${length}\nEnter width:${width}\nArea: ${
+    length * width
+  }\nPerimeter:${2 * (parseInt(length) + parseInt(width))}`
+);
+const PI = 3.14;
+let radius = prompt("Enter Radius");
+let areaCircle = alert(
+  `Enter radius: ${radius}\nArea: ${PI * radius * radius}`
+);
+let hoursWorked = prompt("How many hours have you worked?");
+let ratePerHour = prompt("What your rate per hour?");
+let earnings = alert(
+  `Enter hours: ${hoursWorked}\nEnter rate: ${ratePerHour}\nYour weekly Earnings:${
+    hoursWorked * ratePerHour
+  }`
+);
