@@ -4681,3 +4681,28 @@ let earnings = alert(
     hoursWorked * ratePerHour
   }`
 );
+let name = prompt("Enter your name");
+let nameLength =
+  name.length >= 7
+    ? alert(` your ${name} is ${name.length} long. That is a long name`)
+    : alert(`your ${name} is ${name.length} long. That is a short name`);
+    // let firstName = prompt("What is your first Name?");
+// let lastName = prompt("What is your last name?");
+// let nameLength =
+//   firstName.length > lastName.length
+//     ? alert(`Your last name ${lastName} is shorter then your ${firstName}`)
+//     : alert(` Your first name is longer then your last name`);
+// function CanYouDrive() {
+//   let year = new Date().getFullYear();
+//   let yourYear = prompt(`Enter the year you were born`);
+//   if (year - yourYear >= 18) {
+//     alert(`Enter birth year: ${yourYear}
+//       You are ${year - yourYear}. You are old enough to drive`);
+//   } else {
+//     alert(`Enter birth year: ${yourYear}
+//       You are ${year - yourYear}. You will be allowed to drive after ${
+//       18 - (year - yourYear)
+//     } years.`);
+//   }
+// }
+// CanYouDrive();
