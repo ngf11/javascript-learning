@@ -4822,3 +4822,56 @@ console.log(
       return a + b;
     })
 );
+day 4
+const canYouDrive = () => {
+  const drivingAge = 18;
+  let enterAge = prompt("Enter your age");
+  let drive =
+    enterAge >= drivingAge
+      ? alert(`Enter age: ${enterAge}\nYou can Drive`)
+      : alert(
+          `Enter age: ${enterAge}\nYou are ${enterAge}, you can drive in ${
+            drivingAge - enterAge
+          } years`
+        );
+};
+canYouDrive();
+const whoIsOlder = () => {
+  const myAge = 34;
+  let yourAge = prompt("Enter your age");
+  if (myAge > yourAge) {
+    alert(`Enter age: ${yourAge}\n I am olderthe you by ${myAge - yourAge}`);
+  } else {
+    alert(`Enter age: ${yourAge}\nYou are older the me by ${yourAge - myAge}`);
+  }
+};
+whoIsOlder();
+function evenOrNot() {
+  let enterNum = prompt("enter any number");
+  if (enterNum % 2 === 0) {
+    alert(`Enter number: ${enterNum}\nIs an even number`);
+  } else {
+    alert(`Enter number: ${enterNum}\nIs an odd number`);
+  }
+}
+evenOrNot();
+function whatIsYourGrade() {
+  let grade = prompt("Enter your grade in numbers");
+  switch (true) {
+    case grade >= 90:
+      alert("A");
+      break;
+    case grade >= 80:
+      alert("B");
+      break;
+    case grade >= 70:
+      alert("C");
+      break;
+    case grade >= 60:
+      alert("D");
+      break;
+    default:
+      alert("F");
+  }
+}
+whatIsYourGrade();
