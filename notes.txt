@@ -4875,3 +4875,24 @@ function whatIsYourGrade() {
   }
 }
 whatIsYourGrade();
+function seasons() {
+  let whatMonthisIt = prompt("what mont we are in?");
+  const month = whatMonthisIt.toLowerCase();
+  switch (month) {
+    case "september" || "october" || "november":
+      alert("Fall");
+      break;
+    case "december" || "january" || "february":
+      alert("winter");
+      break;
+    case "march" || "may" || "april":
+      alert("spring");
+      break;
+    case "june" || "july" || "august":
+      alert("summer");
+      break;
+    default:
+      alert("That is not a month");
+  }
+}
+seasons();
