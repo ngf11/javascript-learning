@@ -4941,4 +4941,73 @@ console.log(itCompanies.join(" "));
 // itCompanies.splice(5, 2, "Oracle and Amazon are big tech companies").join(" ");
 // console.log(itCompanies.toString(", "));
 console.log(itCompanies);
-
+const itCompanies = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+let enterCorp = "Apple";
+let index = itCompanies.indexOf(enterCorp);
+if (index == -1) {
+  console.log("this company dose not exist");
+} else {
+  console.log(`${itCompanies[index]} does exist`);
+}
+itCompanies.sort();
+itCompanies.reverse();
+itCompanies.splice(0, 3);
+itCompanies.splice((itCompanies.length - 1) / 2, 1);
+itCompanies.splice(1, 2);
+itCompanies.splice(itCompanies.length - 1, 1);
+console.log(itCompanies);
+let text =
+  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+let word = text.replace(/[^\w\s]|_/g, "");
+let words = word.split(" ");
+console.log(words);
+console.log(words.length);
+const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
+shoppingCart.unshift("Meat");
+shoppingCart.push("Sugar");
+shoppingCart.splice(4, 1);
+shoppingCart.splice(3, 1, "Green Tea");
+console.log(shoppingCart);
+let country = "Ethiopia";
+let itExist = countries.indexOf(country);
+if (itExist === -1) {
+  countries.push(country);
+} else {
+  countries[itExist] = "ETHIOPIA";
+}
+console.log(countries);
+let index = webTechs.indexOf("Sass");
+if (index === -1) {
+  webTechs.splice(2, 0, "Sass");
+}
+console.log(webTechs);
+const frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd = ["Node", "Express", "MongoDB"];
+const fullStack = frontEnd.concat(backEnd);
+console.log(fullStack);
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages.sort();
+console.log(ages);
+console.log(ages.length);
+let medianAge = ages[ages.length / 2];
+console.log(medianAge);
+let ave = ages.reduce(function (a, b) {
+  return Math.round((a + b) / 2);
+});
+console.log(ave);
+let min = Math.min(...ages);
+let max = Math.max(...ages);
+console.log(min);
+let range = max - min;
+console.log(range);
+console.log(countries[(countries.length - 1) / 2]);
+let countriesArr = countries.splice((countries.length - 1) / 2);
+console.log(countriesArr);
