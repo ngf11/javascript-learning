@@ -1,33 +1,75 @@
-let lettersAndNums =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxwz12345647890";
-let strSplit = lettersAndNums.split("");
-const storeUserIds = [];
-let ranNum = Math.floor(Math.random() * 22);
-for (let i = 0; i < 1; i++) {
-  let userId = "";
-  for (let j = 0; j < ranNum; j++) {
-    let random = Math.floor(Math.random() * strSplit.length);
-    userId += strSplit[random];
-  }
-  storeUserIds.push(userId);
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+  "Iceland",
+];
+
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+const mernStack = ["MongoDB", "Express", "React", "Node"];
+let countriesLength = [];
+for (const country of countries) {
+  countriesLength.push(country.length);
 }
-console.log(storeUserIds);
-let hexNumsNLetters = "abcdef123456789";
-let hexSplit = hexNumsNLetters.split("");
-console.log(hexSplit);
-for (let i = 0; i < 1; i++) {
-  let hex = [];
-  for (let j = 0; j < 6; j++) {
-    let random = Math.floor(Math.random() * hexNumsNLetters.length);
-    hex.push(hexNumsNLetters[random]);
-  }
-  console.log("#" + hex.join(""));
+console.log(countriesLength);
+let countriesInfo = [];
+for (const country of countries) {
+  countriesInfo.push([
+    country,
+    country.toUpperCase().slice(0, 3),
+    country.length,
+  ]);
 }
-for (let i = 0; i < 1; i++) {
-  let rgb = [];
-  for (let j = 0; j < 3; j++) {
-    let random = Math.floor(Math.random() * 256);
-    rgb.push(random);
+console.log(countriesInfo);
+let countriesWithLand = [];
+for (const country of countries) {
+  if (country.includes("land")) {
+    countriesWithLand.push(country);
   }
-  console.log(`rgb(${rgb})`);
 }
+console.log(countriesWithLand);
+let countriesWithIA = [];
+for (const country of countries) {
+  if (country.includes("ia")) {
+    countriesWithIA.push(country);
+  }
+}
+console.log(countriesWithIA);
+let longestCountry = [];
+for (let i = 1; i < countries.length; i++) {
+  if (countries[i].length > longestCountry.length) {
+    longestCountry = countries[i];
+  }
+}
+console.log(longestCountry);
+let countriesLengthFive = [];
+for (const country of countries) {
+  if (country.length === 5) {
+    countriesLengthFive.push(country);
+  }
+}
+console.log(countriesLengthFive);
+let longestTech = [];
+for (let i = 1; i < webTechs.length; i++) {
+  if (webTechs[i].length > longestTech.length) {
+    longestTech = webTechs[i];
+  }
+}
+console.log(longestTech);
