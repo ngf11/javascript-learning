@@ -44,3 +44,49 @@ function convertCelsiusToFahrenheit(c) {
 }
 console.log(convertCelsiusToFahrenheit(0));
 console.log(convertCelsiusToFahrenheit(20));
+function bodyMassIndex(weight, height) {
+  let bmi = weight / (height * height);
+  console.log(bmi);
+  if (bmi > 30) {
+    return "Obese";
+  } else if (bmi >= 25) {
+    return "Overweight";
+  } else if (bmi >= 18.5) {
+    return "Normal weight";
+  } else if (bmi <= 18) {
+    return "Underweight";
+  }
+}
+console.log(bodyMassIndex(84, 1.68));
+function seasons(seasons) {
+  if (seasons == "December" || seasons == "January" || seasons == "Febuary") {
+    return "Winter";
+  } else if (seasons == "March" || seasons == "April" || seasons == "May") {
+    return "Spring";
+  } else if (seasons == "June" || seasons == "July" || seasons == "August") {
+    return "Summer";
+  } else if (
+    seasons == "September" ||
+    seasons == "October" ||
+    seasons == "November"
+  ) {
+    return "Fall";
+  } else {
+    return "That is not a month";
+  }
+}
+console.log(seasons("Febuary"));
+console.log(seasons("April"));
+console.log(seasons("June"));
+console.log(seasons("September"));
+function findMax(...arg) {
+  return Math.max(...arg);
+}
+console.log(findMax(8, 3, 6, 8, 11));
+function printArray(array) {
+  for (const arr of array) {
+    console.log(arr);
+  }
+}
+const nico = ["nico", 34, 1989, "Uruguay", "USA"];
+printArray(nico);
