@@ -90,3 +90,46 @@ function printArray(array) {
 }
 const nico = ["nico", 34, 1989, "Uruguay", "USA"];
 printArray(nico);
+function showDateTime() {
+  const now = new Date();
+  let day = now.getDate();
+  let month = now.getMonth() + 1;
+  let year = now.getFullYear();
+  let hh = now.getHours();
+  let mm = now.getMinutes();
+  if (day < 10) {
+    day = "0" + day;
+  }
+  if (month < 10) {
+    month = "0" + month;
+  }
+  if (hh > 12) {
+    hh = hh - 12;
+  }
+  if (hh < 10) {
+    hh = "0" + hh;
+  }
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
+  return `${day}/${month}/${year} ${hh}:${mm}`;
+}
+console.log(showDateTime());
+function swapValues(x, y) {
+  let trun = x;
+  x = y;
+  y = trun;
+  console.log(`x =>${x}, y=>${y}`);
+}
+swapValues(3, 4); // x => 4, y=>3
+swapValues(4, 5); // x = 5, y = 4
+function reverseArray(arr) {
+  let revArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    let index = arr[i];
+    revArr.push(index);
+  }
+  return revArr;
+}
+console.log(reverseArray([1, 2, 3, 4, 5]));
+console.log(reverseArray(["A", "B", "C"]));
