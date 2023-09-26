@@ -5446,3 +5446,7 @@ function evensAndOdds(range) {
   return `The number of odds are ${sumOdds.length}.\nThe number of evens are ${sumEven.length}.`;
 }
 console.log(evensAndOdds(100));
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+arr.forEach((item) => {
+  console.log(item * item);
+});
