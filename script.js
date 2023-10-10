@@ -40,3 +40,69 @@ function arrayOfRgbColors() {
   }
 }
 arrayOfRgbColors();
+
+function shuffleArray(arr) {
+  let shuffleArr = [];
+  while (arr.length > 0) {
+    let randomIndex = Math.floor(Math.random() * arr.length);
+    let removedItem = arr.splice(randomIndex, 1)[0];
+    shuffleArr.push(removedItem);
+  }
+  return shuffleArr;
+}
+console.log(shuffleArray([1, 2, 3, 4, 5, 6]));
+function isEmpty(item) {
+  if (item === null || item == "" || item === undefined) {
+    return "is empty";
+  } else {
+    return item;
+  }
+}
+let nico = null;
+let milo;
+let didi = "";
+let siggy = undefined;
+let jaja = 3;
+console.log(isEmpty(nico));
+console.log(isEmpty(milo));
+console.log(isEmpty(didi));
+console.log(isEmpty(siggy));
+console.log(isEmpty(jaja));
+function sum(...arg) {
+  let sum = 0;
+  for (let i = 0; i < arg.length; i++) {
+    sum += arg[i];
+  }
+  return sum;
+}
+console.log(sum(1, 2, 3, 4, 5));
+function sumOfArrayItems(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+console.log(sumOfArrayItems([1, 2, 3, 4, 5]));
+function average(arr) {
+  let arrLength = arr.length;
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arrLength;
+}
+console.log(average([1, 2, 3, 4, 5]));
+function modifyArray(arr) {
+  for (const items of arr) {
+    if (items[5] === null) {
+      return " Item not fund";
+    } else {
+      items[5].toUppercase();
+    }
+    return items;
+  }
+}
+console.log(
+  modifyArray(["Avocado", "Tomato", "Potato", "Mango", "Lemon", "Carrot"])
+);
