@@ -28,4 +28,15 @@ arrayOfHexaColors();
 
 function arrayOfRgbColors() {
   let numberRGB = 5;
+  let rgbStr = "";
+  let rgbArr = [];
+  for (let i = 0; i < numberRGB; i++) {
+    let rgb = [];
+    for (let j = 0; j < 3; j++) {
+      let random = Math.floor(Math.random() * 256);
+      rgb.push(random);
+    }
+    console.log(`rgb(${rgb})`);
+  }
 }
+arrayOfRgbColors();
