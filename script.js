@@ -93,16 +93,26 @@ function average(arr) {
   return sum / arrLength;
 }
 console.log(average([1, 2, 3, 4, 5]));
-function modifyArray(arr) {
-  for (const items of arr) {
-    if (items[5] === null) {
-      return " Item not fund";
-    } else {
-      items[5].toUppercase();
-    }
-    return items;
+const modifyArray = (arr) => {
+  if (arr.length >= 5) {
+    arr[4] = arr[4].toUpperCase();
+    return arr;
+  } else {
+    return "Items not found";
   }
-}
+};
 console.log(
   modifyArray(["Avocado", "Tomato", "Potato", "Mango", "Lemon", "Carrot"])
 );
+console.log(modifyArray(["didi", "siggy", "nico"]));
+
+function sevenRandomNumbers() {
+  let sevenArr = [];
+  for (let i = 0; i < 7; i++) {
+    let random = Math.floor(Math.random() * 9);
+    sevenArr.push(random);
+  }
+  return sevenArr;
+}
+
+console.log(sevenRandomNumbers());
