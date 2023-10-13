@@ -1,6 +1,24 @@
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+
 }
+Here's a breakdown of how the function works:
+
+string.charAt(0):
+
+string is the input parameter, which is a string.
+.charAt(0) is a method that operates on a string and retrieves the character at the specified index. In this case, it retrieves the character at index 0, which is the first character of the string.
+.toUpperCase():
+
+After getting the first character of the string, this method is used to convert it to uppercase. This ensures that the first letter of the string is capitalized.
+string.slice(1):
+
+.slice(1) is a method that operates on a string and extracts a portion of the string starting from the character at index 1 (the second character) to the end of the string.
+This part of the code extracts the rest of the original string (excluding the first character), effectively making it lowercase.
++:
+
+The + operator is used to concatenate the uppercase first character with the lowercase rest of the string.
+Finally, the function returns the result of this concatenation, which is the input string with the first letter capitalized.
 -----------
 const fullStack = [
   ["HTML", "CSS", "JS", "React"],
