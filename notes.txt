@@ -5815,3 +5815,62 @@ console.log(
       return a + b;
     })
 );
+//day 3
+let firstName = "nico";
+let lastName = "Fuentes";
+let country = "United Sates";
+let state = "New Jeresey";
+let age = 34;
+let isMerried = false;
+console.log({ firstName, lastName, country, state, age, isMerried });
+console.log(typeof "10" === typeof 10);
+console.log(parseFloat("9.8") == 10);
+let milo = "woof";
+let didi = 3;
+let isCool = true;
+let notCool = null;
+let milito = undefined;
+let bro;
+console.log(4 > 3);
+console.log(4 >= 3, true);
+console.log(4 < 3, false);
+console.log(4 <= 3, false);
+console.log(4 == 4, true);
+console.log(4 === 4, true);
+console.log(4 != 4, false);
+console.log(4 !== 4, false);
+console.log(4 != "4", false);
+console.log(4 == "4", true);
+console.log(4 === "4", false);
+console.log(!("python".length === "jargon".length));
+console.log(4 > 3 && 10 < 12, true);
+console.log(4 > 3 && 10 > 12, false);
+console.log(4 > 3 || 10 < 12, true);
+console.log(4 > 3 || 10 > 12, true);
+console.log(!(4 > 3), false);
+console.log(!(4 < 3), true);
+console.log(!false, true);
+console.log(!(4 > 3 && 10 < 12), false);
+console.log(!(4 > 3 && 10 > 12), true);
+console.log(!(4 === "4"), true);
+console.log(!("dragon".includes("on"), "python".includes("on")));
+let hieght = prompt("Enter the hieght of a triangle?");
+let base = prompt("enter the  base of  a triangle?");
+let area = alert(
+  `Enter base: ${base}\nEnter height: ${hieght}\nThe area of the triangle is ${
+    0.5 * base * hieght
+  }`
+);
+let sideA = prompt("Enter Side A");
+let sideB = prompt("Enter Side B");
+let sideC = prompt("Enter Side C");
+let permimenter = alert(
+  `Enter side a: ${sideA}\nEnter side b: ${sideB}\nEnter side c: ${sideC}\nThe perimeter of the triangle is ${
+    parseInt(sideA) + parseInt(sideB) + parseInt(sideC)
+  }`
+);
+let length = prompt("Enter lenght");
+let width = prompt("Enter width");
+let area = alert(
+  `The area of the rectangle is:\n${2 * (parseInt(length) + parseInt(width))}`
+);
