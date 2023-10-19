@@ -6041,3 +6041,41 @@ function capFirst(str) {
 }
 console.log(capFirst("gud"));
 */
+//day 4
+/* function canYouDrive() {
+  let yourAge = prompt("How old are you?");
+  return yourAge >= 18
+    ? alert(`Enter your age: ${yourAge}\nYou are old enough to drive.`)
+    : alert(
+        `Enter your age: ${yourAge}\nYou are left with ${
+          18 - yourAge
+        } years to drive.`
+      );
+}
+canYouDrive();
+function isEven() {
+    let num = prompt("Enter a number");
+    return num % 2 === 0 ? alert("Is even ") : alert("its odd");
+}
+isEven();
+let yourGrade = prompt("What is your grade?", "number form");
+switch (true) {
+    case yourGrade >= 90:
+        alert("A");
+        break;
+        case yourGrade >= 80:
+            alert("B");
+            break;
+            case yourGrade >= 70:
+                alert("C");
+                break;
+                case yourGrade >= 60:
+                    alert("D");
+                    break;
+                    case yourGrade <= 50:
+                        alert("F");
+                        break;
+                        default:
+                            alert("Thats not a grade");
+                        }
+ */
