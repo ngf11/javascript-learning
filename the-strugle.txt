@@ -19,7 +19,9 @@ This part of the code extracts the rest of the original string (excluding the fi
 
 The + operator is used to concatenate the uppercase first character with the lowercase rest of the string.
 Finally, the function returns the result of this concatenation, which is the input string with the first letter capitalized.
+
 -----------
+
 const fullStack = [
   ["HTML", "CSS", "JS", "React"],
   ["Node", "Express", "MongoDB"],
