@@ -376,7 +376,27 @@ for (let i = 1; i <= 1; i++) {
   console.log(userId);
 }
 ----------
-22
+fillter out array items that have more then one letter in this case the letter "o"
+let filteredCompanies = [];
+
+for (let i = 0; i < itCompanies.length; i++) {
+  let company = itCompanies[i];
+  let count = 0;
+
+  for (let j = 0; j < company.length; j++) {
+    if (company[j].toLowerCase() === "o") {
+      count++;
+    }
+  }
+
+  if (count >= 2) {
+    filteredCompanies.push(company);
+  }
+}
+
+console.log(filteredCompanies);
+-----------
+23
 
 
 
