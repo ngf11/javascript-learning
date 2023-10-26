@@ -1,35 +1,56 @@
-let itCompanies = [
-  "Facebook",
-  "Google",
-  "Microsoft",
-  "Apple",
-  "IBM",
-  "Oracle",
-  "Amazon",
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
 ];
-itCompanies.sort();
-itCompanies.reverse();
-itCompanies.splice(0, 3);
-console.log(itCompanies);
-itCompanies.splice(1, 2);
-console.log(itCompanies);
-itCompanies.shift();
-console.log(itCompanies);
-itCompanies.pop();
-console.log(itCompanies);
-let text =
-  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
-let textStripted = text.replace(/[^\w\s]|_/g, "");
-console.log(textStripted);
-let words = textStripted.split(" ");
-console.log(words);
-console.log(words.length);
-const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
-shoppingCart.unshift("Meat");
-console.log(shoppingCart);
-shoppingCart.push("Sugar");
-console.log(shoppingCart);
-shoppingCart.splice(4, 1);
-console.log(shoppingCart);
-shoppingCart.splice(3, 1, "Yerba Mate");
-console.log(shoppingCart);
+
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+for (const country of countries) {
+  if (country.includes("Ethiopia") == true) {
+    console.log(country.toUpperCase());
+  }
+}
+if (webTechs.includes("Sass")) {
+  console.log(webTechs);
+} else {
+  webTechs.splice(2, 0, "Sass is a CSS preprocess");
+  console.log(webTechs);
+}
+const frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd = ["Node", "Express", "MongoDB"];
+const fullStack = frontEnd.concat(backEnd);
+console.log(fullStack);
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages.sort();
+console.log(ages);
+let median = ages[Math.round((ages.length - 1) / 2)];
+let sum = 0;
+for (let i = 0; i <= ages.length; i++) {
+  sum += i;
+}
+let ave = Math.round(sum / ages.length);
+console.log(ave);
+let min = Math.min(...ages);
+let max = Math.max(...ages);
+console.log({ min, max });
+console.log(min - ave, max - ave);
+// countries.splice(0, 9);
+// console.log(countries);
+let midd = (countries.length - 1) / 2;
+console.log(countries[midd]);
