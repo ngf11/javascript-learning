@@ -1,13 +1,3 @@
-//day 05
-const emptyArray = [];
-const numArray = [1, 2, 34, 5, 6, 369];
-console.log(numArray.length);
-console.log(
-  numArray[0],
-  numArray[Math.round((numArray.length - 1) / 2)],
-  numArray[numArray.length - 1]
-);
-const mixedDataTypes = ["nico", "milo", true, false, 11, { skill: null }];
 let itCompanies = [
   "Facebook",
   "Google",
@@ -17,44 +7,29 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
+itCompanies.sort();
+itCompanies.reverse();
+itCompanies.splice(0, 3);
 console.log(itCompanies);
-console.log(itCompanies.length);
-console.log(itCompanies[0]);
-console.log(itCompanies[(itCompanies.length - 1) / 2]);
-console.log(itCompanies[itCompanies.length - 1]);
-console.log(itCompanies[0]);
-console.log(itCompanies[1]);
-console.log(itCompanies[2]);
-console.log(itCompanies[3]);
-console.log(itCompanies[4]);
-console.log(itCompanies[5]);
-console.log(itCompanies[6]);
-for (const companies of itCompanies) {
-  console.log(companies.toUpperCase());
-}
-// itCompanies.splice(5, 2, "Oracle and Amazon are big IT companies.");
-// console.log(itCompanies.toString());
-// let enterCorp = prompt("Enter a name of a company");
-// let lowerCorp = enterCorp.toLowerCase();
-// let corp = lowerCorp.charAt(0).toUpperCase() + lowerCorp.slice(1);
-// if (itCompanies.includes(corp) == true) {
-//   alert(corp);
-// } else {
-//   alert("company is not found");
-// }
-let filteredCompanies = [];
-for (let i = 0; i < itCompanies.length; i++) {
-  let company = itCompanies[i];
-  let count = 0;
-  for (let j = 0; j < company.length; j++) {
-    if (company[j].toLowerCase() === "o") {
-      count++;
-    }
-  }
-  if (count >= 2) {
-    filteredCompanies.push(company);
-  }
-}
-console.log(filteredCompanies);
-console.log(itCompanies.sort());
-console.log(itCompanies.sort().reverse());
+itCompanies.splice(1, 2);
+console.log(itCompanies);
+itCompanies.shift();
+console.log(itCompanies);
+itCompanies.pop();
+console.log(itCompanies);
+let text =
+  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+let textStripted = text.replace(/[^\w\s]|_/g, "");
+console.log(textStripted);
+let words = textStripted.split(" ");
+console.log(words);
+console.log(words.length);
+const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
+shoppingCart.unshift("Meat");
+console.log(shoppingCart);
+shoppingCart.push("Sugar");
+console.log(shoppingCart);
+shoppingCart.splice(4, 1);
+console.log(shoppingCart);
+shoppingCart.splice(3, 1, "Yerba Mate");
+console.log(shoppingCart);
