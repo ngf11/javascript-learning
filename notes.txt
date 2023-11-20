@@ -6415,3 +6415,39 @@ for (let i = 0; i <= 100; i++) {
     console.log(i);
   }
 }
+let sum = 0;
+for (let i = 0; i <= 100; i++) {
+  sum += i;
+}
+let even = 0;
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 == 0) {
+    even += i;
+  }
+}
+let odd = 0;
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 !== 0) {
+    odd += i;
+  }
+}
+console.log(`sum all: ${sum}\nsum even: ${even}\nsum odd:${odd} `);
+const arr = [];
+for (let i = 0; i < 5; i++) {
+  let random = Math.floor(Math.random() * 100);
+  arr.push(random);
+}
+console.log(arr);
+const letterAndNums =
+  "abcdefgHijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*+";
+let split = letterAndNums.split("");
+console.log(split);
+let array = [];
+let ID = "";
+for (let i = 0; i < 6; i++) {
+  let random = Math.floor(Math.random() * split.length);
+  array.push(split[random]);
+}
+console.log(array);
+split = array.join("");
+console.log(split);
