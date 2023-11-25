@@ -14,3 +14,14 @@ for (let i = 0; i < random; i++) {
 console.log(passCodeArr);
 passCodeId = passCodeArr.join("");
 console.log(passCodeId);
+
+const lettersAndNumbers = ["a", "b", "c", "d", "f", 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let hex = [];
+let hexStr = "";
+for (let i = 0; i < 6; i++) {
+  let random = Math.floor(Math.random() * lettersAndNumbers.length);
+  hex.push(lettersAndNumbers[random]);
+}
+console.log(hex);
+hexStr = "#" + hex.join("");
+console.log(hexStr);
