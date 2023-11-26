@@ -1,27 +1,57 @@
-// day 6 ex 2 num 1
-const characters =
-  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
-let charSplit = characters.split("");
-console.log(charSplit);
-let passCodeArr = [];
-let passCodeId;
-let random = Math.floor(Math.random() * 10 * 2);
-console.log(random);
-for (let i = 0; i < random; i++) {
-  let randomChar = Math.floor(Math.random() * charSplit.length);
-  passCodeArr.push(charSplit[randomChar]);
-}
-console.log(passCodeArr);
-passCodeId = passCodeArr.join("");
-console.log(passCodeId);
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
 
-const lettersAndNumbers = ["a", "b", "c", "d", "f", 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let hex = [];
-let hexStr = "";
-for (let i = 0; i < 6; i++) {
-  let random = Math.floor(Math.random() * lettersAndNumbers.length);
-  hex.push(lettersAndNumbers[random]);
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+const mernStack = ["MongoDB", "Express", "React", "Node"];
+let rgbArr = [];
+for (let i = 0; i < 3; i++) {
+  let random = Math.floor(Math.random() * 256);
+  rgbArr.push(random);
 }
-console.log(hex);
-hexStr = "#" + hex.join("");
-console.log(hexStr);
+let rgb = `rgb(${rgbArr})`;
+console.log(rgbArr);
+console.log(rgb);
+// for (const items of countries) {
+//   let upperItems = [];
+//   upperItems.push(items.toUpperCase());
+//   console.log(upperItems);
+//   // console.log(items.toUpperCase());
+// }
+let country = [];
+for (let i = 0; i < countries.length; i++) {
+  let newArr;
+  newArr = countries[i].toUpperCase();
+  console.log(newArr);
+  country.push(newArr);
+}
+console.log(country);
+let countryLength = [];
+for (const items of countries) {
+  console.log(items.length);
+  countryLength.push(items.length);
+}
+console.log(countryLength);
+let contryInfo = [];
+for (const items of countries) {
+  console.log([items, items.slice(0, 3).toUpperCase(), items.length]);
+}
