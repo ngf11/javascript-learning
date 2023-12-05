@@ -6477,3 +6477,41 @@ for (let i = 0; i < 6; i++) {
 console.log(hex);
 hexStr = "#" + hex.join("");
 console.log(hexStr);
+//map()
+const arr = [5, 1, 3, 2, 6];
+console.log(arr.map((items) => items * 2));
+console.log(arr.map((items) => items * 3));
+console.log(arr.map((items) => items.toString(2)));
+function dubble(x) {
+  return x * 2;
+}
+function triple(x) {
+  return x * 3;
+}
+function binary(x) {
+  return x.toString(2);
+}
+let ouput = arr.map(dubble);
+let ouput2 = arr.map(triple);
+let output3 = arr.map(binary);
+console.log(ouput, ouput2, output3);
+const family = ["didi", "mama", "dada", "baby", "dog"];
+function toUpper(x) {
+  return x.charAt(0).toUpperCase() + x.slice(1);
+}
+let fam = family.map(toUpper);
+console.log(fam);
+//filter()
+const arr = [5, 1, 3, 2, 6];
+function isOdd(x) {
+  return x % 2;
+}
+console.log(
+  arr.filter((items) => {
+    if (items % 2 == 0) {
+      return items;
+    }
+  })
+);
+console.log(arr.filter((items) => items % 2 === 0));
+console.log(arr.filter(isOdd));
