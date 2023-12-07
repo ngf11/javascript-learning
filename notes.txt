@@ -6573,3 +6573,48 @@ let output4 = users.reduce((acc, user) => {
   return acc;
 }, []);
 console.log(output4);
+const items = [
+  { name: "Rice", price: 5 },
+  { name: "Book", price: 20 },
+  { name: "Chiken", price: 10 },
+  { name: "Monitor", price: 100 },
+];
+// let totalPrice = 0;
+// items.forEach((item) => {
+//   totalPrice += item.price;
+// });
+let totalPrice = items.reduce((total, item) => {
+  console.log(`Total:${total}`);
+  console.log(`item: ${item.price}`);
+  console.log("-----");
+  return total + item.price;
+}, 0);
+console.log(totalPrice);
+const people = [
+  { name: "nico", age: 34 },
+  { name: "siggy", age: 36 },
+  { name: "didi", age: 3 },
+  { name: "milo", age: 10 },
+];
+
+const result = people.reduce((grouped, person) => {
+  const age = person.age;
+  if (grouped[age] == null) grouped[age] = [];
+  grouped[age].push(person);
+  return grouped;
+}, {});
+
+console.log(result);
+
+const numbers = [13, 2, 5];
+
+const sum = numbers.reduce((total, item) => {
+  return total + item;
+}, 0);
+console.log(sum);
+
+const avrageAge = people.reduce((total, person) => {
+  console.log(`total:${total}`);
+
+  return (total + person.age) / people.length;
+}, 0);
