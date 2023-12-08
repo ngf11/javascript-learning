@@ -26,4 +26,16 @@ console.log(nameArr);
 const onlyThirty = people.filter((person) => {
   return person.age > 30;
 });
+const olderThenThirtyName = people
+  .filter((person) => {
+    return person.age > 30;
+  })
+  .map((person) => person.name);
 console.log(onlyThirty);
+console.log(olderThenThirtyName);
+const ageTotal = people.reduce((total, number) => {
+  console.log(`total:${total}`);
+  console.log(`Number:${number.age}`);
+  return total + number.age;
+}, 0);
+console.log(ageTotal);
