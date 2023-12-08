@@ -6618,3 +6618,40 @@ const avrageAge = people.reduce((total, person) => {
 
   return (total + person.age) / people.length;
 }, 0);
+const numbers = [3, 6, 2, 9, 1];
+const sum = numbers.reduce((total, number) => {
+  console.log(`Total:${total}`);
+  console.log(`Number:${number}`);
+  return total + number;
+}, 0);
+console.log(sum);
+const people = [
+  {
+    name: "Nico Fuentes",
+    age: 34,
+  },
+  {
+    name: "Didi TinTin",
+    age: 3,
+  },
+  {
+    name: "Siggy Acevedo",
+    age: 36,
+  },
+  {
+    name: "Milo Fuentes",
+    age: 10,
+  },
+];
+
+const oldestAge = people.reduce((total, item) => {
+  return item.age > total ? item.age : total;
+}, 0);
+console.log(oldestAge);
+
+const initials = people.reduce((total, item, index, array) => {
+  const split = item.name.split(" ");
+  let part = `${split[0][0]}${split[1][0]}`;
+  console.log(part);
+}, "");
+console.log(initials);
