@@ -55,3 +55,36 @@ let contryInfo = [];
 for (const items of countries) {
   console.log([items, items.slice(0, 3).toUpperCase(), items.length]);
 }
+const landCountries = countries.filter((items) => {
+  return items.includes("land");
+});
+console.log(landCountries);
+const countriesEndIa = countries.filter((itm) => {
+  return itm.endsWith("ia");
+});
+console.log(countriesEndIa);
+let longgestCountries = [];
+for (let i = 1; i < countries.length; i++) {
+  if (countries[i].length > longgestCountries.length) {
+    longgestCountries = countries[i];
+  }
+}
+console.log(longgestCountries);
+const fiveCharLength = countries.filter((items) => {
+  if (items.length === 5) {
+    return items;
+  }
+});
+console.log(fiveCharLength);
+let longestTech = [];
+for (let i = 1; i < webTechs.length; i++) {
+  if (webTechs[i].length > longestTech.length) {
+    longestTech = webTechs[i];
+  }
+}
+console.log(longestTech);
+let techInfo = [];
+for (const tech of webTechs) {
+  techInfo.push([tech, tech.length]);
+}
+console.log(techInfo);
