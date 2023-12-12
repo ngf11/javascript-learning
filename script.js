@@ -88,3 +88,23 @@ for (const tech of webTechs) {
   techInfo.push([tech, tech.length]);
 }
 console.log(techInfo);
+for (let i = 0; i < mernStack.length; i++) {
+  let mern = "";
+  mern = mernStack[i].charAt(0);
+  console.log(mern.toString());
+}
+for (let i = 0; i < webTechs.length; i++) {
+  console.log(webTechs[i]);
+}
+console.log(["banana", "orange", "mango", "lemon"].reverse());
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+
+// for (let i = 0; i < fullStack.length; i++) {
+//   console.log(fullStack[i]);
+// }
+for (const tech of fullStack) {
+  console.log(tech);
+}
