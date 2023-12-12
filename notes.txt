@@ -6696,3 +6696,146 @@ const ageTotal = people.reduce((total, number) => {
   return total + number.age;
 }, 0);
 console.log(ageTotal);
+const mernStack = ["MongoDB", "Express", "React", "Node"];
+let rgbArr = [];
+for (let i = 0; i < 3; i++) {
+  let random = Math.floor(Math.random() * 256);
+  rgbArr.push(random);
+}
+let rgb = `rgb(${rgbArr})`;
+console.log(rgbArr);
+console.log(rgb);
+// for (const items of countries) {
+//   let upperItems = [];
+//   upperItems.push(items.toUpperCase());
+//   console.log(upperItems);
+//   // console.log(items.toUpperCase());
+// }
+let country = [];
+for (let i = 0; i < countries.length; i++) {
+  let newArr;
+  newArr = countries[i].toUpperCase();
+  console.log(newArr);
+  country.push(newArr);
+}
+console.log(country);
+let countryLength = [];
+for (const items of countries) {
+  console.log(items.length);
+  countryLength.push(items.length);
+}
+console.log(countryLength);
+let contryInfo = [];
+for (const items of countries) {
+  console.log([items, items.slice(0, 3).toUpperCase(), items.length]);
+}
+const landCountries = countries.filter((items) => {
+  return items.includes("land");
+});
+console.log(landCountries);
+const countriesEndIa = countries.filter((itm) => {
+  return itm.endsWith("ia");
+});
+console.log(countriesEndIa);
+let longgestCountries = [];
+for (let i = 1; i < countries.length; i++) {
+  if (countries[i].length > longgestCountries.length) {
+    longgestCountries = countries[i];
+  }
+}
+console.log(longgestCountries);
+const fiveCharLength = countries.filter((items) => {
+  if (items.length === 5) {
+    return items;
+  }
+});
+console.log(fiveCharLength);
+let longestTech = [];
+for (let i = 1; i < webTechs.length; i++) {
+  if (webTechs[i].length > longestTech.length) {
+    longestTech = webTechs[i];
+  }
+}
+console.log(longestTech);
+let techInfo = [];
+for (const tech of webTechs) {
+  techInfo.push([tech, tech.length]);
+}
+console.log(techInfo);
+for (let i = 0; i < mernStack.length; i++) {
+  let mern = "";
+  mern = mernStack[i].charAt(0);
+  console.log(mern.toString());
+}
+for (let i = 0; i < webTechs.length; i++) {
+  console.log(webTechs[i]);
+}
+console.log(["banana", "orange", "mango", "lemon"].reverse());
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+
+// for (let i = 0; i < fullStack.length; i++) {
+//   console.log(fullStack[i]);
+// }
+for (const tech of fullStack) {
+  console.log(tech);
+}
+//for loop
+// for (let i = 0; i < companies.length; i++) {
+//   console.log(companies[i]);
+// }
+//foreach
+// companies.forEach((company, index, comp) => {
+//   console.log(company);
+// });
+//filter
+// companies.filter((item, index) => {
+//   console.log(item.name, index);
+// });
+// const overTwntieOne = ages.filter((items) => {
+//   if (items >= 21) {
+//     return items;
+//   }
+// });
+// console.log(overTwntieOne);
+// let twntieOneAndUp = [];
+// for (let i = 0; i < ages.length; i++) {
+//   if (ages[i] >= 21) {
+//     twntieOneAndUp.push(ages[i]);
+//   }
+// }
+// console.log(twntieOneAndUp);
+// const retail = companies.filter((item) => item.category === "Retail");
+// console.log(retail);
+// const eighties = companies.filter(
+//   (item) => item.start >= 1980 && item.start < 1990
+// );
+// console.log(eighties);
+// const overTen = companies.filter((item) => item.end - item.start >= 10);
+// console.log(overTen);
+// const compName = companies.map((item) => item.name);
+// console.log(compName);
+// const squarAges = ages.map((item) => Math.sqrt(item));
+// console.log(squarAges);
+// const sortedComp = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+// console.log(sortedComp);
+// const sortedAges = ages.sort();
+// console.log(sortedAges);
+// const sortAgess = ages.sort((a, b) => (a > b ? 1 : -1));
+// const sortAgess = ages.sort((a, b) => a - b);
+// const sortAgess = ages.sort((a, b) => b - a);
+// console.log(sortAgess);
+let sum = 0;
+for (let i = 0; i < ages.length; i++) {
+  sum += ages[i];
+}
+console.log(sum);
+const ageSum = ages.reduce((a, b) => a + b, 0);
+console.log(ageSum);
+const totalYears = companies.reduce(
+  (total, years) => total + (years.end - years.start),
+  0
+);
+console.log(totalYears);
