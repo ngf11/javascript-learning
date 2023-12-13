@@ -6880,4 +6880,11 @@ const areasOfCircles = redius.map((items) => Math.PI * items * items);
 console.log(areasOfCircles);
 const circonferences = redius.map((items) => 2 * (Math.PI * items));
 console.log(circonferences);
+const redius = [3, 1, 2, 4];
+const area = (r) => Math.PI * r * r;
+const diameter = (r) => r * 2;
+const cimcmferec = (r) => 2 * (Math.PI * r);
+console.log(redius.map(area));
+console.log(redius.map(diameter));
+console.log(redius.map(cimcmferec));
 
