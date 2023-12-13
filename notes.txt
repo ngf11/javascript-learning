@@ -6839,3 +6839,45 @@ const totalYears = companies.reduce(
   0
 );
 console.log(totalYears);
+const techCompanies = companies.filter(
+  (item) => item.category === "Technology"
+);
+console.log(techCompanies);
+const catCompanies = companies.map((item) => item.category);
+console.log(catCompanies);
+const sortedYears = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+console.log(sortedYears);
+const agesOne = ages.sort((a, b) => a - b);
+const agesTwo = ages.sort((a, b) => b - a);
+console.log(agesOne);
+console.log(agesTwo);
+
+const totalYears = companies.reduce(
+  (total, company) => total + (company.end - company.start),
+  0
+);
+console.log(totalYears);
+const companies = [
+  { name: "Company One", category: "Finance", start: 1981, end: 2004 },
+  { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
+  { name: "Company Three", category: "Auto", start: 1999, end: 2007 },
+  { name: "Company Four", category: "Retail", start: 1989, end: 2010 },
+  { name: "Company Five", category: "Technology", start: 2009, end: 2014 },
+  { name: "Company Six", category: "Finance", start: 1987, end: 2010 },
+  { name: "Company Seven", category: "Auto", start: 1986, end: 1996 },
+  { name: "Company Eight", category: "Technology", start: 2011, end: 2016 },
+  { name: "Company Nine", category: "Retail", start: 1981, end: 1989 },
+];
+const ages = [33, 12, 28, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+const combine = ages
+  .map((items) => items * 2)
+  .filter((items) => items >= 40)
+  .sort((a, b) => a - b)
+  .reduce((total, item) => total + item, 0);
+console.log(combine);
+const areasOfCircles = redius.map((items) => Math.PI * items * items);
+console.log(areasOfCircles);
+const circonferences = redius.map((items) => 2 * (Math.PI * items));
+console.log(circonferences);
+
