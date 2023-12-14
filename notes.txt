@@ -6887,4 +6887,18 @@ const cimcmferec = (r) => 2 * (Math.PI * r);
 console.log(redius.map(area));
 console.log(redius.map(diameter));
 console.log(redius.map(cimcmferec));
+const trasportaion = data.reduce(
+  (total, item) => {
+    total[item]++;
+    return total;
+  },
+  {
+    car: 0,
+    truck: 0,
+    bike: 0,
+    walk: 0,
+    van: 0,
+  }
+);
+console.log(trasportaion);
 
