@@ -87,6 +87,11 @@ console.log(years);
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+const peopleByLast = people.sort((a, b) => {
+  const [last, first] = b.split(", ");
+
+  console.log(last, first);
+});
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
@@ -106,3 +111,18 @@ const data = [
   "car",
   "truck",
 ];
+
+const trasportaion = data.reduce(
+  (total, item) => {
+    total[item]++;
+    return total;
+  },
+  {
+    car: 0,
+    truck: 0,
+    bike: 0,
+    walk: 0,
+    van: 0,
+  }
+);
+console.log(trasportaion);
