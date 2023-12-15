@@ -1,27 +1,12 @@
-function fun() {
-  return new Promise((respone, reject) => {
-    respone("Hello");
+function getData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(46);
+    }, 100);
   });
 }
-function funn(data) {
-  return new Promise((respone, reject) => {
-    switch (data) {
-      case "hello":
-        respone("Hello 🙉 ");
-        break;
-      default:
-        reject("AHHHHHHH");
-    }
-  });
+async function start() {
+  const result = await getData();
+  console.log(result);
 }
-function onSuccess(data) {
-  console.log(`Succsses: ${data}`);
-}
-
-function onError(data) {
-  console.log(" Error: AHAAHAHAH");
-}
-function onFinally() {
-  console.log("ALL Done");
-}
-fun().then(funn).then(onSuccess).catch(onError).finally(onFinally);
+start();
