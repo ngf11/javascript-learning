@@ -6901,4 +6901,136 @@ const trasportaion = data.reduce(
   }
 );
 console.log(trasportaion);
+const peopleByLast = people.sort((a, b) => {
+  const [last, first] = b.split(", ");
 
+  console.log(last, first);
+});
+const years = inventors.sort((a, b) =>
+  a.passed - a.year > b.passed - b.year ? -1 : 1
+);
+console.log(years);
+const yearsLived = inventors.reduce(
+  (total, years) => total + (years.passed - years.year),
+  0
+);
+const sortedInventors = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
+console.log(sortedInventors);
+const firstLast = inventors.map((item) => `${item.first} ${item.last}`);
+console.log(firstLast);
+const fith = inventors.filter((item) => item.year >= 1500 && item.year <= 1599);
+console.log(fith);
+function getWeather() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("fatty");
+    }, 2000);
+    reject("not fatty");
+  });
+}
+
+const promise = getWeather();
+promise.then(
+  (data) => {
+    console.log(`First parm ${data}`);
+  },
+  (data) => {
+    console.log(`second parm ${data}`);
+  }
+);
+//PROMISSES
+
+function fun1() {
+  return new Promise((resolve, reject) => {
+    setTimeout((data) => {
+      resolve("Hey Yoo!!");
+    }, 200);
+  });
+}
+function funny() {
+  return new Promise((resolve, reject) => {
+    setTimeout((data) => {
+      switch (data) {
+        case "Hey Yoo!!":
+          resolve("Hey Yoo!!");
+          break;
+        case "Booty":
+          resolve("Booty!!");
+          break;
+        default:
+          reject("Puto");
+      }
+    }, 200);
+  });
+}
+function funSuccess(data) {
+  console.log(`Success: ${data}`);
+}
+
+function funError(data) {
+  console.log(`Error: ${data}`);
+}
+
+fun1().then(funSuccess).catch(funError);
+
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    fetch("https://api.weather.gov/gridpoints/OKX/35,35/forecast")
+      .then((responce) => responce.json())
+      .then((data) => resolve(data.properties.periods[1].shortForecast));
+  });
+}
+function displayData(weather) {
+  console.log(weather);
+}
+function onError(error) {
+  console.log("Error");
+}
+
+fetchData().then(displayData).catch("error");
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    fetch("https://api.weather.gov/gridpoints/0kx/35.35/forecast");
+  })
+    .then((responce) => responce.json)
+    .then((data) => resolve(data.periods[1].detailedForecast));
+}
+//.then((data) => resolve(data.periods[1].shortForecast))
+function getWeather() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Cloudy");
+    }, 200);
+    // reject("not fatty");
+  });
+}
+function getIcon(data) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      switch (data) {
+        case "Sunny":
+          resolve("🌞 ");
+          break;
+        case "Cloudy":
+          resolve("⛅ ");
+          break;
+        case "Rainy":
+          resolve("🌧 ");
+          break;
+        default:
+          reject("🤦 ");
+      }
+    }, 200);
+  });
+}
+function onSuccsess(data) {
+  console.log(`Succsess ${data}`);
+}
+function onErro(data) {
+  console.log(`Error: ${data}`);
+}
+
+function inTheEnd() {
+  console.log("We done Here");
+}
+getWeather().then(getIcon).then(onSuccsess).catch(onErro).finally(inTheEnd);

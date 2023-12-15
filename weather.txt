@@ -1,0 +1,46 @@
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    fetch("https://api.weather.gov/gridpoints/0kx/35.35/forecast");
+  })
+    .then((responce) => responce.json)
+    .then((data) => resolve(data.periods[1].detailedForecast));
+}
+//.then((data) => resolve(data.periods[1].shortForecast))
+function getWeather() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Cloudy");
+    }, 200);
+    // reject("not fatty");
+  });
+}
+function getIcon(data) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      switch (data) {
+        case "Sunny":
+          resolve("🌞 ");
+          break;
+        case "Cloudy":
+          resolve("⛅ ");
+          break;
+        case "Rainy":
+          resolve("🌧 ");
+          break;
+        default:
+          reject("🤦 ");
+      }
+    }, 200);
+  });
+}
+function onSuccsess(data) {
+  console.log(`Succsess ${data}`);
+}
+function onErro(data) {
+  console.log(`Error: ${data}`);
+}
+
+function inTheEnd() {
+  console.log("We done Here");
+}
+getWeather().then(getIcon).then(onSuccsess).catch(onErro).finally(inTheEnd);
