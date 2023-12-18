@@ -7109,3 +7109,54 @@ async function start() {
   console.log(result.properties.periods[1].shortForecast);
 }
 start();
+function getData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject("Something Went Wrong");
+    }, 100);
+  });
+}
+function onSucces() {
+  console.log(`Success: ${data}`);
+}
+function onError() {
+  console.log(`Error: ${Error}`);
+}
+async function start() {
+  try {
+    const data = await getData();
+    onSucces();
+  } catch (error) {
+    console.log(`Error: ${error}`);
+    onError();
+  }
+}
+
+start();
+async function fun() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Vamos Argentina");
+    }, 200);
+  });
+}
+
+function onSucc(data) {
+  switch (data) {
+    case "Vamos Uruguay":
+      console.log(`Succsess: ${data}`);
+      break;
+    case "Vamos Argentina":
+      reject(`Error: ${data}`);
+      break;
+  }
+}
+
+function onErro(data) {
+  console.log(`Error: ${data}`);
+}
+
+function onComplete() {
+  console.log("Complete");
+}
+fun().then(onSucc).catch(onErro).finally(onComplete);
