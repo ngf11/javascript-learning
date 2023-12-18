@@ -1,12 +1,24 @@
 function getData() {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(46);
+      reject("Something Went Wrong");
     }, 100);
   });
 }
-async function start() {
-  const result = await getData();
-  console.log(result);
+function onSucces() {
+  console.log(`Success: ${data}`);
 }
+function onError() {
+  console.log(`Error: ${Error}`);
+}
+async function start() {
+  try {
+    const data = await getData();
+    onSucces();
+  } catch (error) {
+    console.log(`Error: ${error}`);
+    onError();
+  }
+}
+
 start();
