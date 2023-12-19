@@ -7196,3 +7196,58 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 getWeather().then(getIcon).then(onSuccess).catch(onError);
+function funOne() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("");
+    }, 100);
+  });
+}
+
+function funTwo(data) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      switch (data) {
+        case "Hello":
+          resolve("🍑 ");
+          break;
+        case "Damn":
+          resolve("🍒 ");
+          break;
+        default:
+          reject("🍌 ");
+      }
+    }, 100);
+  });
+}
+
+function onSuccess(data) {
+  console.log(`Success: ${data}`);
+}
+
+function onError(error) {
+  console.log(`Error: ${error}`);
+}
+
+function onFinally() {
+  console.log("Completed");
+}
+funOne().then(funTwo).then(onSuccess).catch(onError).then(onFinally);
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      fetch("https://api.weather.gov/gridpoints/OKX/35,35/forecast")
+        .then((response) => response.json())
+        .then((data) => resolve(data.properties.periods[1].shortForecast));
+    });
+  }, 200);
+}
+
+function displayData(data) {
+  console.log(`${data}`);
+}
+
+function onError(error) {
+  console.log(`Error: ${error}`);
+}
+fetchData().then(displayData).catch(onError);

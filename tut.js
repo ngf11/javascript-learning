@@ -1,37 +1,14 @@
-function funOne() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("");
-    }, 100);
-  });
-}
-
-function funTwo(data) {
+function fetchData() {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      switch (data) {
-        case "Hello":
-          resolve("🍑 ");
-          break;
-        case "Damn":
-          resolve("🍒 ");
-          break;
-        default:
-          reject("🍌 ");
-      }
-    }, 100);
+    fetch(
+      "https://api.soccerdataapi.com/livescores/?auth_token=7336b77d2f4f9c28740cb42868508ed17e8ce4df"
+    )
+      .then((response) => response.json())
+      .then((data) => resolve(data.map((item) => item.country)));
   });
 }
 
-function onSuccess(data) {
-  console.log(`Success: ${data}`);
+function displayData(data) {
+  console.log(data);
 }
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-function onFinally() {
-  console.log("Completed");
-}
-funOne().then(funTwo).then(onSuccess).catch(onError).then(onFinally);
+fetchData().then(displayData);
