@@ -1,28 +1,25 @@
-function getWeather() {
-  return new Promise((resolve, reject) => {
+function funOne() {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve("");
     }, 100);
   });
 }
 
-function getIcon(data) {
+function funTwo(data) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       switch (data) {
-        case "Sunny":
-          resolve("🌞 ");
+        case "Hello":
+          resolve("🍑 ");
           break;
-        case "Cloudy":
-          resolve("⛅ ");
-          break;
-        case "Rainy":
-          resolve("🌧 ");
+        case "Damn":
+          resolve("🍒 ");
           break;
         default:
-          reject("Ass 🏳️‍🌈 ");
+          reject("🍌 ");
       }
-    }, 200);
+    }, 100);
   });
 }
 
@@ -33,4 +30,8 @@ function onSuccess(data) {
 function onError(error) {
   console.log(`Error: ${error}`);
 }
-getWeather().then(getIcon).then(onSuccess).catch(onError);
+
+function onFinally() {
+  console.log("Completed");
+}
+funOne().then(funTwo).then(onSuccess).catch(onError).then(onFinally);
