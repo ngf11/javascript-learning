@@ -1,14 +1,12 @@
-function fetchData() {
+function getData() {
   return new Promise((resolve, reject) => {
-    fetch(
-      "https://api.soccerdataapi.com/livescores/?auth_token=7336b77d2f4f9c28740cb42868508ed17e8ce4df"
-    )
-      .then((response) => response.json())
-      .then((data) => resolve(data.map((item) => item.country)));
+    setTimeout(() => {
+      resolve("Hello mate!!");
+    }, 100);
   });
 }
-
-function displayData(data) {
-  console.log(data);
+async function start() {
+  const result = await getData();
+  console.log(result);
 }
-fetchData().then(displayData);
+start();
