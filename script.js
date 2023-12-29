@@ -1,13 +1,28 @@
-const BMI = (w, h) => {
-  let cal = w / (w * h);
-  if (cal < 18.5) {
-    return `Your BMI is ${cal} you are Underweight `;
-  } else if (cal <= 24.9) {
-    return `Your BMI is ${cal} you are Normal `;
-  } else if (cla < 29.9) {
-    return `Your BMI is ${cal} you are Overweight `;
-  } else {
-    return `Your BMI is ${cal} you are Obese `;
+function showTime() {
+  const now = new Date();
+  let day = now.getDate();
+  let year = now.getFullYear();
+  let month = now.getMonth() + 1;
+  let hh = now.getHours();
+  let mm = now.getMinutes();
+  return `${month}/${day}/${year} ${hh}:${mm}`;
+}
+console.log(showTime());
+function swapValues(x, y) {
+  let temp = x;
+  let xOne = y;
+  return `x = ${xOne}\ny= ${temp}`;
+}
+console.log(swapValues(1, 2));
+// function reverseArray(arr) {
+//   return arr.reverse();
+// }
+function reverseArray(arr) {
+  let RevDevArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    let index = arr[i];
+    RevDevArr.push(index);
   }
-};
-console.log(BMI(90, 1.69));
+  return RevDevArr;
+}
+console.log(reverseArray([1, 2, 3, 4, 5]));
