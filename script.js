@@ -26,3 +26,22 @@ function reverseArray(arr) {
   return RevDevArr;
 }
 console.log(reverseArray([1, 2, 3, 4, 5]));
+const capitalizeArray = (arr) => {
+  let newArr = [];
+  for (const cappArr of arr) {
+    newArr.push(cappArr.toUpperCase());
+  }
+  return newArr;
+};
+console.log(capitalizeArray(["dada", "didi", "mama"]));
+let newArr = [];
+const addItem = (item, arr) => arr.push(item);
+addItem("Dada", newArr);
+addItem("Mama", newArr);
+console.log(newArr);
+const removeItem = (index, arr) => {
+  const removeIndex = arr.indexOf(index);
+  arr.splice(removeIndex, 1);
+};
+removeItem(1, newArr);
+console.log(newArr);

@@ -396,7 +396,14 @@ for (let i = 0; i < itCompanies.length; i++) {
 
 console.log(filteredCompanies);
 -----------
-23
+REMOVE ITEM IN ARRAY
+const removeItem = (index, arr) => {
+  const removeIndex = arr.indexOf(index);
+  arr.splice(removeIndex, 1);
+};
+removeItem(1, newArr);
+-------------
+25
 
 
 
