@@ -403,7 +403,26 @@ const removeItem = (index, arr) => {
 };
 removeItem(1, newArr);
 -------------
-25
+function randomHexColorGenerator() {
+  let hex = "#";
+  for (let i = 0; i < 6; i++) {
+    hex += Math.floor(Math.random() * 16).toString(16);
+  }
+  return hex;
+}
+console.log(randomHexColorGenerator());
+
+The line Math.floor(Math.random() * 16).toString(16); is used to generate a random hexadecimal digit. Let's break it down:
+
+Math.random(): This is a built-in JavaScript function that generates a pseudo-random floating-point number in the range from 0 (inclusive) to 1 (exclusive) 5.
+Math.random() * 16: This operation multiplies the random number by 16. Since Math.random() returns a number between 0 and 1, the resulting number will be between 0 and 16.
+Math.floor(Math.random() * 16): The Math.floor() function rounds down the resulting number to the nearest whole number. So now, the number will be either 0, 1, 2, ..., 15. These are all valid hexadecimal digits, except for 10 to 15, which are represented as 'a' to 'f' in hexadecimal notation.
+(Math.floor(Math.random() * 16)).toString(16): Finally, toString(16) is called on the result to convert the number to a hexadecimal string. This means that the number 10 will become 'a', 11 will become 'b', etc.
+So, overall, this line of code generates a random hexadecimal digit 3, 4, 5.
+
+---------------------------
+
+26
 
 
 
