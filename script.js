@@ -1,53 +1,3 @@
-// function sumOfOdds(num) {
-//   let sum = 0;
-//   for (let i = 0; i <= num; i++) {
-//     if (i % 2 != 0) {
-//       sum += i;
-//     }
-//   }
-//   return sum;
-// }
-// console.log(sumOfOdds(100));
-// function sumOfEven(num) {
-//   let sum = 0;
-//   for (let i = 0; i <= num; i++) {
-//     sum += i;
-//   }
-//   return sum;
-// }
-// console.log(sumOfEven(100));
-const evensAndOdds = (num) => {
-  let sumOdd = 0;
-  let sumEven = 0;
-  for (let i = 0; i <= num; i++) {
-    if (i % 2 !== 0) {
-      sumOdd += i;
-    }
-  }
-  for (let i = 0; i <= num; i++) {
-    if (i % 2 == 0) {
-      sumEven += i;
-    }
-  }
-  return `The number of odds are ${sumOdd}.\nThe number of evens are ${sumEven}.`;
-};
-console.log(evensAndOdds(100));
-
-const sum = (...arg) => arg.reduce((a, b) => a + b);
-console.log(sum(1, 2, 3));
-
-// function randomHexaNumberGenerator() {
-//   let hex = "";
-//   let hexChar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "a", "b", "c", "d", "e", "f"];
-//   let hexArr = [];
-//   for (let i = 0; i < 6; i++) {
-//     let random = Math.floor(Math.random() * hexChar.length);
-//     hexArr.push(hexChar[random]);
-//   }
-//   hex = "#" + hexArr.join(",");
-
-//   return hex;
-// }
 function randomHexColorGenerator() {
   let hex = "#";
   for (let i = 0; i < 6; i++) {
@@ -56,3 +6,38 @@ function randomHexColorGenerator() {
   return hex;
 }
 console.log(randomHexColorGenerator());
+const userIdGenerator = () => {
+  let ID = "";
+  let char = "abcdefghijklmnopqrstuvxxwzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
+  let charArr = char.split("");
+  for (let i = 0; i <= 7; i++) {
+    let random = Math.floor(Math.random() * charArr.length);
+
+    ID += charArr[random];
+  }
+  return ID;
+};
+console.log(userIdGenerator());
+const userIdGeneratedByUser = () => {
+  let idLength = prompt("How long you want your id's?");
+  let numberOfId = prompt("How many new id's?");
+  let idArr = [];
+  let ID = "";
+  let char = "abcdefghijklmnopqrstuvxxwzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
+  let charArr = char.split("");
+  for (let i = 0; i < numberOfId; i++) {
+    for (let j = 0; j <= idLength; j++) {
+      let random = Math.floor(Math.random() * charArr.length);
+
+      ID += charArr[random];
+    }
+    idArr.push(ID);
+  }
+  console.log(idArr.length);
+  idArr.map((items) => {
+    console.log(items.length);
+  });
+  return idArr;
+};
+console.log(userIdGeneratedByUser());
+//fix this a problem with the length of the id's
