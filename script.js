@@ -19,13 +19,15 @@ const userIdGenerator = () => {
 };
 console.log(userIdGenerator());
 const userIdGeneratedByUser = () => {
-  let idLength = prompt("How long you want your id's?");
-  let numberOfId = prompt("How many new id's?");
-  let idArr = [];
-  let ID = "";
+  // let idLength = prompt("How long you want your id's?");
+  // let numberOfId = prompt("How many new id's?");
+  let idLength = 5;
+  let numberOfId = 5;
   let char = "abcdefghijklmnopqrstuvxxwzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
   let charArr = char.split("");
-  for (let i = 0; i < numberOfId; i++) {
+  let idArr = [];
+  for (let i = 0; i <= numberOfId; i++) {
+    let ID = "";
     for (let j = 0; j <= idLength; j++) {
       let random = Math.floor(Math.random() * charArr.length);
 
@@ -33,11 +35,17 @@ const userIdGeneratedByUser = () => {
     }
     idArr.push(ID);
   }
-  console.log(idArr.length);
-  idArr.map((items) => {
-    console.log(items.length);
-  });
   return idArr;
 };
 console.log(userIdGeneratedByUser());
-//fix this a problem with the length of the id's
+const rgbColorGenerator = () => {
+  let rgbArr = [];
+  for (let i = 0; i < 3; i++) {
+    let random = Math.floor(Math.random() * 256);
+    rgbArr.push(random);
+  }
+  let rgb = `rgb(${rgbArr})`;
+  return rgb;
+};
+console.log(rgbColorGenerator());
+const arrayOfHexaColors = () => {};
