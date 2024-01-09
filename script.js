@@ -48,4 +48,15 @@ const rgbColorGenerator = () => {
   return rgb;
 };
 console.log(rgbColorGenerator());
-const arrayOfHexaColors = () => {};
+const arrayOfHexaColors = (num) => {
+  let hexArr = [];
+  for (let i = 0; i < num; i++) {
+    let hex = "#";
+    for (let j = 0; j < 6; j++) {
+      hex += Math.floor(Math.random() * 16).toString(16);
+    }
+    hexArr.push(hex);
+  }
+  return hexArr;
+};
+console.log(arrayOfHexaColors(5));
