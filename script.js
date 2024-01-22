@@ -1,23 +1,31 @@
 //day 08
 const person = {
   firstName: "Asabeneh",
-  lastName: "Yetayeh",
   age: 250,
   country: "Finland",
   city: "Helsinki",
-  skills: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Node",
-    "MongoDB",
-    "Python",
-    "D3.js",
-  ],
-  getFullName: function () {
-    return `${this.firstName} ${this.lastName}`;
+  skills: ["HTML", "CSS", "JS"],
+  title: "teacher",
+  address: {
+    street: "Heitamienkatu 16",
+    pobox: 2002,
+    city: "Helsinki",
   },
-  "phone number": "+3584545454545",
+  getPersonInfo: function () {
+    return `I am ${this.firstName} and I live in ${this.city}, ${this.country}. I am ${this.age}.`;
+  },
 };
-console.log(person.getFullName());
+
+const copyPerson = Object.assign({}, person);
+console.log(copyPerson);
+const keys = Object.keys(copyPerson);
+console.log(keys); //['firstName', 'age', 'country','city', 'skills','title', 'address', 'getPersonInfo']
+const address = Object.keys(copyPerson.address);
+console.log(address); //['street', 'pobox', 'city']
+console.log("----");
+const values = Object.values(copyPerson);
+console.log(values);
+console.log("----");
+
+const entries = Object.entries(copyPerson);
+console.log(entries);
