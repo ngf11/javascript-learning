@@ -1,31 +1,89 @@
 //day 08
-const person = {
-  firstName: "Asabeneh",
-  age: 250,
-  country: "Finland",
-  city: "Helsinki",
-  skills: ["HTML", "CSS", "JS"],
-  title: "teacher",
-  address: {
-    street: "Heitamienkatu 16",
-    pobox: 2002,
-    city: "Helsinki",
+const dog = {
+  name: "milo",
+  color: "White",
+  legs: 4,
+  age: 10,
+  brak() {
+    console.log(`Woolf Woolf`);
   },
-  getPersonInfo: function () {
-    return `I am ${this.firstName} and I live in ${this.city}, ${this.country}. I am ${this.age}.`;
+};
+console.log(Object.values(dog));
+dog.breed = "BullDog";
+dog.getDogInfo = () => {
+  return Object.entries(dog);
+};
+// console.log(Object.values(dog));+
+console.log("----");
+console.log(dog.getDogInfo());
+const users = {
+  Alex: {
+    email: "alex@alex.com",
+    skills: ["HTML", "CSS", "JavaScript"],
+    age: 20,
+    isLoggedIn: false,
+    points: 30,
+  },
+  Asab: {
+    email: "asab@asab.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 25,
+    isLoggedIn: false,
+    points: 50,
+  },
+  Brook: {
+    email: "daniel@daniel.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+    age: 30,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Daniel: {
+    email: "daniel@alex.com",
+    skills: ["HTML", "CSS", "JavaScript", "Python"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  John: {
+    email: "john@john.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    age: 20,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Thomas: {
+    email: "thomas@thomas.com",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  Paul: {
+    email: "paul@paul.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
   },
 };
 
-const copyPerson = Object.assign({}, person);
-console.log(copyPerson);
-const keys = Object.keys(copyPerson);
-console.log(keys); //['firstName', 'age', 'country','city', 'skills','title', 'address', 'getPersonInfo']
-const address = Object.keys(copyPerson.address);
-console.log(address); //['street', 'pobox', 'city']
-console.log("----");
-const values = Object.values(copyPerson);
-console.log(values);
-console.log("----");
-
-const entries = Object.entries(copyPerson);
-console.log(entries);
+const loggedin = users.sort((a, b) => a.skills > b.skills);
+console.log(loggedin);
