@@ -56,7 +56,7 @@ const users = {
   },
   John: {
     email: "john@john.com",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node"],
     age: 20,
     isLoggedIn: true,
     points: 50,
@@ -84,6 +84,25 @@ const users = {
     points: 40,
   },
 };
+const usersArray = Object.values(users);
+// const loggedInUsers = usersArray.filter(
+//   (user) => user.isLoggedIn && user.points >= 50
+// );
+// console.log(loggedInUsers);
+const skillsArr = usersArray.sort((a, b) => {
+  if (a.skills.length > b.skills.length) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+console.log(skillsArr);
 
-const loggedin = users.sort((a, b) => a.skills > b.skills);
-console.log(loggedin);
+const mernStackUser = usersArray.filter((user) =>
+  user.skills.includes("MongoDB", "Express", "React", "Node")
+);
+console.log(mernStackUser);
+const newUser = Object.assign({}, users);
+console.table(newUser);
+newUser.Nico = nico;
+console.table(newUser);
