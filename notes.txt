@@ -7481,3 +7481,21 @@ const arrayOfHexaColors = (num) => {
   return hexArr;
 };
 console.log(arrayOfHexaColors(5));
+//day 08
+const dog = {
+  name: "milo",
+  color: "White",
+  legs: 4,
+  age: 10,
+  brak() {
+    console.log(`Woolf Woolf`);
+  },
+};
+console.log(Object.values(dog));
+dog.breed = "BullDog";
+dog.getDogInfo = () => {
+  return Object.entries(dog);
+};
+// console.log(Object.values(dog));+
+console.log("----");
+console.log(dog.getDogInfo());
