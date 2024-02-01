@@ -7499,3 +7499,9 @@ dog.getDogInfo = () => {
 // console.log(Object.values(dog));+
 console.log("----");
 console.log(dog.getDogInfo());
+// short circut
+console.log(true || "hello");
+console.log(false || "hello");
+console.log("--------");
+console.log(true && "hello");
+console.log(false && "hello");
