@@ -68,3 +68,21 @@ const users = {
 };
 const copyUsers = Object.assign({}, users);
 console.log(copyUsers);
+const keys = Object.keys(copyUsers);
+console.log(keys);
+const values = Object.values(copyUsers);
+console.log(values);
+console.log("---Progress--");
+const enteries = Object.entries(copyUsers.isLoggedIn >= 50);
+const usersArray = Object.values(users);
+const loggedInUsers = usersArray.filter(
+  (user) => user.isLoggedIn && user.points >= 50
+);
+console.log(loggedInUsers);
+console.log("--You got it--");
+const mernStack = usersArray.filter((user) =>
+  user.skills.includes("MongoDB" && "Express" && "React" && "Node")
+    ? user
+    : "No MERN stack Here"
+);
+console.log(mernStack);
