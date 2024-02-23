@@ -86,3 +86,6 @@ const mernStack = usersArray.filter((user) =>
     : "No MERN stack Here"
 );
 console.log(mernStack);
+// copyUsers.push("nico");
+// console.log(copyUsers);
+console.log(keys);
