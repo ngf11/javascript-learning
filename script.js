@@ -1,91 +1,44 @@
-const users = {
-  Alex: {
-    email: "alex@alex.com",
-    skills: ["HTML", "CSS", "JavaScript"],
-    age: 20,
-    isLoggedIn: false,
-    points: 30,
-  },
-  Asab: {
-    email: "asab@asab.com",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Redux",
-      "MongoDB",
-      "Express",
-      "React",
-      "Node",
-    ],
-    age: 25,
-    isLoggedIn: false,
-    points: 50,
-  },
-  Brook: {
-    email: "daniel@daniel.com",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
-    age: 30,
-    isLoggedIn: true,
-    points: 50,
-  },
-  Daniel: {
-    email: "daniel@alex.com",
-    skills: ["HTML", "CSS", "JavaScript", "Python"],
-    age: 20,
-    isLoggedIn: false,
-    points: 40,
-  },
-  John: {
-    email: "john@john.com",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
-    age: 20,
-    isLoggedIn: true,
-    points: 50,
-  },
-  Thomas: {
-    email: "thomas@thomas.com",
-    skills: ["HTML", "CSS", "JavaScript", "React"],
-    age: 20,
-    isLoggedIn: false,
-    points: 40,
-  },
-  Paul: {
-    email: "paul@paul.com",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "MongoDB",
-      "Express",
-      "React",
-      "Node",
-    ],
-    age: 20,
-    isLoggedIn: false,
-    points: 40,
-  },
-};
-const copyUsers = Object.assign({}, users);
-console.log(copyUsers);
-const keys = Object.keys(copyUsers);
-console.log(keys);
-const values = Object.values(copyUsers);
-console.log(values);
-console.log("---Progress--");
-const enteries = Object.entries(copyUsers.isLoggedIn >= 50);
-const usersArray = Object.values(users);
-const loggedInUsers = usersArray.filter(
-  (user) => user.isLoggedIn && user.points >= 50
+let challege = "30 Days of JavaScript";
+console.log(challege);
+console.log(challege.length);
+console.log(challege.toLowerCase());
+console.log(challege.toUpperCase());
+console.log(challege.substring(3, 7));
+console.log(challege.slice(3, challege.length - 1));
+console.log(challege.includes("Script"));
+console.log(challege.split());
+console.log(challege.split(""));
+console.log(challege.split(" "));
+console.log(
+  "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon".split(",")
 );
-console.log(loggedInUsers);
-console.log("--You got it--");
-const mernStack = usersArray.filter((user) =>
-  user.skills.includes("MongoDB" && "Express" && "React" && "Node")
-    ? user
-    : "No MERN stack Here"
+console.log("30 Days of JavaScript".replace("JavaScript", "Python"));
+console.log("30 Days of JavaScript".charAt(15));
+console.log("30 Days of JavaScript".charCodeAt("J"));
+console.log("30 Days of JavaScript".indexOf("a"));
+console.log("30 Days of JavaScript".lastIndexOf("a"));
+console.log(
+  "You cannot end a sentence with because because because is a conjunction".indexOf(
+    "because"
+  )
 );
-console.log(mernStack);
-// copyUsers.push("nico");
-// console.log(copyUsers);
-console.log(keys);
+console.log(
+  "You cannot end a sentence with because because because is a conjunction".lastIndexOf(
+    "because"
+  )
+);
+console.log(
+  "You cannot end a sentence with because because because is a conjunction".search(
+    "because"
+  )
+);
+console.log(" 30 Days Of JavaScript ");
+console.log(" 30 Days Of JavaScript ".trim());
+console.log(challege.startsWith("3"));
+console.log(challege.endsWith("Script"));
+console.log(challege.match("a"));
+console.log(challege.match(/a/gi));
+console.table(challege.match("a"));
+console.table(challege.match(/a/gi));
+console.log("30 Days of".concat(" JavaScript"));
+console.log(challege.repeat(10));
