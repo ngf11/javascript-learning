@@ -1,22 +1,15 @@
-let challege = "30 Days of JavaScript";
-console.log(challege);
-console.log(challege.length);
-console.log(challege.toLowerCase());
-console.log(challege.toUpperCase());
-console.log(challege.substring(3, 7));
-console.log(challege.slice(3, challege.length - 1));
-console.log(challege.includes("Script"));
-console.log(challege.split());
-console.log(challege.split(""));
-console.log(challege.split(" "));
-console.log(
-  "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon".split(",")
-);
-console.log("30 Days of JavaScript".replace("JavaScript", "Python"));
-console.log("30 Days of JavaScript".charAt(15));
-console.log("30 Days of JavaScript".charCodeAt("J"));
-console.log("30 Days of JavaScript".indexOf("a"));
-console.log("30 Days of JavaScript".lastIndexOf("a"));
+console.log(typeof "10" == typeof 10);
+console.log(parseFloat("9.8") == 10);
+console.log(Math.round(parseFloat("9.8")) == 10);
+console.log("jargon".includes("on"), "python".includes("on"));
+console.log("I hope this course is not full of jargon".includes("jargon"));
+console.log(Math.floor(Math.random() * 100));
+console.log(Math.floor(Math.random() * 50) * 2);
+console.log(Math.floor(Math.random() * 156));
+let str = "JavaScript";
+let strSlipt = str.split("");
+console.log(strSlipt[Math.floor(Math.random() * strSlipt.length)]);
+console.log("1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 6\n45 1 5 25 125");
 console.log(
   "You cannot end a sentence with because because because is a conjunction".indexOf(
     "because"
@@ -28,17 +21,8 @@ console.log(
   )
 );
 console.log(
-  "You cannot end a sentence with because because because is a conjunction".search(
-    "because"
+  "You cannot end a sentence with because because because is a conjunction".substring(
+    31,
+    54
   )
 );
-console.log(" 30 Days Of JavaScript ");
-console.log(" 30 Days Of JavaScript ".trim());
-console.log(challege.startsWith("3"));
-console.log(challege.endsWith("Script"));
-console.log(challege.match("a"));
-console.log(challege.match(/a/gi));
-console.table(challege.match("a"));
-console.table(challege.match(/a/gi));
-console.log("30 Days of".concat(" JavaScript"));
-console.log(challege.repeat(10));
