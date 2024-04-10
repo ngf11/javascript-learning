@@ -46,11 +46,28 @@ console.log(itCompanies[0]);
 console.log(itCompanies[(itCompanies.length - 1) / 2]);
 console.log(itCompanies[itCompanies.length - 1]);
 // console.log("itCompanies".toUpperCase());
-for (company of itCompanies) {
-  console.log(company.toUpperCase());
+// for (company of itCompanies) {
+//   console.log(company.toUpperCase());
+// }
+// itCompanies.splice(
+//   itCompanies.length - 1,
+//   1,
+//   " and Amazon are big IT companies."
+// );
+// console.log("----");
+// console.log(itCompanies.join(","));
+let company = "Apple";
+if (itCompanies.includes(company)) {
+  console.log(`${company} exist in itCompanis array`);
+} else {
+  console.log("Company dons not exist");
 }
-console.log(
-  itCompanies
-    .splice(itCompanies.length - 1, 1, " and Amazon are big IT companies.")
-    .join(" ")
-);
+const filteredCompanies = itCompanies.filter((company) => {
+  const countO = (company.match(/o/g) || []).length;
+  return countO <= 1;
+});
+console.log(filteredCompanies);
+console.log(itCompanies.sort());
+console.log(itCompanies.reverse());
+console.log(itCompanies.slice(0, 3));
+console.log(itCompanies.slice(2, 6));

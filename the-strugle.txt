@@ -421,10 +421,15 @@ Math.floor(Math.random() * 16): The Math.floor() function rounds down the result
 So, overall, this line of code generates a random hexadecimal digit 3, 4, 5.
 
 ---------------------------
+filter out companies with more then one "o"
+const filteredCompanies = itCompanies.filter((company) => {
+  const countO = (company.match(/o/g) || []).length;
+  return countO <= 1;
+});
+console.log(filteredCompanies);
 
-26
-
-
+-----------------------------
+27
 
 
 
